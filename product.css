@@ -1,0 +1,452 @@
+/* Общие стили для страницы */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Главный контейнер */
+#main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Стили для изображения продукта (автомобиль) */
+#product-img-window {
+    margin-left: 0.5%;
+    grid-column: span 2;
+    position: relative;
+    display: flex;
+    width: 70%;
+    
+   
+    margin-bottom: 20px;
+}
+
+#product-images img {
+    width: 100%;
+    margin: 0 20px 0 20px;
+    max-width: 1400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   
+}
+
+
+
+/* Стили для информации о товаре, описания и комментариев */
+#product-content {
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    margin-top: 20px;
+}
+
+.section {
+    background-color: #2d72c9; /* Синий цвет */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 18px;
+}
+
+#comments-section {
+    margin-top: 8px;
+    grid-column: span 2;
+    background-color: #fdfdfd;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 12px;
+    width: 33%; /* Расширяем блок комментариев */
+    box-shadow: 10px 20px 4px rgba(0, 0, 0, 0.2);
+    max-height: 300px; /* Фиксируем максимальную высоту */
+    overflow-y: hidden; /* Скрываем прокрутку основного контейнера */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#comments-list {
+    max-height: 250px; /* Ограничиваем высоту для списка комментариев */
+    overflow-y: auto;  /* Включаем прокрутку только для списка комментариев */
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Стили для футера */
+#footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #302929;
+    color: #ddd;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* Стили для шапки */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #eef1f5;
+    color: #f4f1f1;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+header button, header span {
+    cursor: pointer;
+    margin-left: 20px;
+    border: none;
+    background: none;
+    color: #f1ecec;
+}
+
+header button:hover {
+    text-decoration: underline;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    #product-content {
+        grid-template-columns: 1fr;
+    }
+
+    #product-images img {
+        width: 100%;
+        object-fit: cover; /* Заполнение блока изображением */
+    }
+
+    #footer {
+      
+        display: flex;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+
+
+
+/* Характеристики товара */
+#product-details {
+    margin-left: 1%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Равное распределение столбцов */
+    gap: 10px;
+    margin-top: 10px;
+    width: 500px;
+}
+
+#product-details h2 {
+    font-size: 17px;
+    color: #333;
+    padding-bottom: 2px;
+    margin: 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#product-details div {
+    width: 200px;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+#product-details div:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#product-details div h2 {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Информация о продавце */
+#seller-phone-window, #seller-name-window {
+    background-color: #f9f9f9;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#seller-name-window h2, #seller-phone-window h2 {
+    font-size: 16px;
+    color: #333;
+}
+
+#seller-phone-window h2 span, #seller-name-window h2 span {
+    color: #ff5722;
+}
+
+/* Кнопка "показать телефон" */
+#seller-phone-window h2 a {
+    color: #ff5722;
+    text-decoration: none;
+}
+
+/* Адаптивность для маленьких экранов */
+@media (max-width: 768px) {
+    #product-details {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Скрытые элементы */
+.hidden {
+    display: none;
+}
+
+h3 {
+    color: #011418;
+    font-size: 21px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#product-note-window {
+    
+    margin: 20px;
+    margin-left: 1%;
+    width: 69%;
+    height: 200px;
+    background-color: #b9b7b7;
+    padding: 1%;
+    border-radius: 10px;
+    box-shadow: 10px 20px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+#product-name-price {
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    
+    height: 50px;
+    font-size: 10px;
+}
+
+#product-price {
+    margin-left: 30%;
+  
+}
+
+#infopro {
+    
+   
+    width: 35%;
+    padding: 1%;
+}
+
+#prev-image, #next-image {
+    position: absolute;
+    top: 40%;
+    
+    color: rgb(17, 3, 3);
+    border: none;
+    
+    cursor: pointer;
+    z-index: 100;
+    transform: translateY(-1%);
+    border-radius: 5%;
+}
+
+#prev-image {
+    left: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#next-image {
+    right: 10px;
+}
+
+#prev-image:hover, #next-image:hover {
+    background-color: rgba(255, 87, 34, 0.7);
+    border-radius: 5%;
+}
+
+#note-coment {
+    display: flex;
+}
+
+#comment-text {
+    
+    height: 50px;
+    width: 73%;
+    border-radius: 10px;
+    box-shadow: 10px 20px 4px rgba(0, 0, 0, 0.2);
+}
+
+#submit-comment {
+    padding: 5px 25px 5px 25px;
+    border-radius: 10px;
+  
+    
+}
+
+
+
+
+
+#comment-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+#comment-text {
+    width: 80%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#submit-comment {
+    padding: 5px 15px;
+    border-radius: 10px;
+    background-color: #ff5722;
+    color: white;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#logo {
+    display: flex;
+    width: auto; /* Используем автоширину, чтобы не растягивался */
+    max-width: 150px; /* Максимальная ширина для логотипа */
+    padding: 0; /* Уменьшаем padding, если он не нужен */
+    margin-left: 5%;
+    
+}
+
+
+
+/* product.css */
+
+@media (max-width: 768px) {
+    /* Основной контейнер для продукта */
+    #product-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    /* Блок с изображением */
+    #product-img-window {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    /* Название и цена продукта */
+    
+
+    /* Детали продукта, выровненные в два столбца по левому краю */
+    #product-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        width: 90%; /* ширина блока с деталями продукта */
+        margin-top: 15px;
+        align-self: flex-start; /* Выровнять по левому краю */
+        margin-left: 3%;
+    }
+
+    /* Индивидуальные ячейки с информацией */
+    .info-item {
+        background-color: #f9f9f9;
+        padding: 10px;
+        border-radius: 8px;
+        font-size: 14px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        text-align: left;
+    }
+
+    /* Блоки комментариев и заметок */
+    
+
+    /* Поле комментариев и кнопка отправки */
+    #comment-form {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #comments-list {
+        max-height: 200px;
+        overflow-y: auto;
+        margin-top: 10px;
+    }
+    #infopro {
+        
+        margin-left: 5%;  
+        width: 90%;
+    }
+    
+   
+
+}

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+  <header>
+    <button id="home-button" onclick="goHome()"><img id="logo" src="Logo.png" alt=""></button>
+    <button onclick="goToAddProduct()">Добавить товар</button>
+    <span id="user-name" class="hidden">Имя пользователя</span> <!-- Элемент для отображения имени пользователя -->
+    <div id="popup-menu" class="hidden">
+        <button id="edit-button" onclick="editProfile()">Редактировать</button>
+        <button id="logout-button" onclick="logout()">Выйти</button>
+    </div>
+</header>
+
+
+    <main>
+        <h2 id="welcome-message"></h2>
+        <button onclick="goToAddProduct()">Добавить товар</button>
+
+        <h3>Список ваших товаров:</h3>
+        <ul id="product-list"></ul> <!-- Список товаров -->
+    </main>
+
+    <!-- Модальное окно для редактирования товара -->
+    <div id="edit-modal" class="modal hidden ">
+        <div class="modal-content" >
+            <span class="close" onclick="closeEditModal()">&times;</span> <!-- Кнопка закрытия модального окна -->
+            <h3>Редактировать товар</h3>
+
+            <label for="product-name">Название товара:</label>
+            <input type="text" id="product-name"  />
+
+            <label for="product-category">Категория товара:</label>
+            <select id="product-category"  onchange="updateBrands()">
+              
+                <option value="car">Автомобиль</option>
+                <option value="parts">Запчасти</option>
+                <option value="service">Сервис</option>
+                <option value="rent">Аренда</option>
+                <option value="yacht">Яхта</option>
+            </select>
+
+
+
+            <div id="product-brand-group" class="field brand">
+            <label for="product-brand">Марка автомобиля:</label>
+            <select id="product-brand"  onchange="updateModels()">
+                <option value="">Выберите марку</option>
+                <option value="audi">Audi</option>
+                
+                
+                <option value="acura">Acura</option>
+                <option value="alfaromeo">Alfa Romeo</option>
+                <option value="astonmartin">Aston Martin</option>
+                <option value="audi">Audi</option>
+                <option value="bentley">Bentley</option>
+                <option value="bmw">BMW</option>
+                <option value="bugatti">Bugatti</option>
+                <option value="buick">Buick</option>
+                <option value="cadillac">Cadillac</option>
+                <option value="chevrolet">Chevrolet</option>
+                <option value="chrysler">Chrysler</option>
+                <option value="citroën">Citroën</option>
+                <option value="dacia">Dacia</option>
+                <option value="daewoo">Daewoo</option>
+                <option value="daihatsu">Daihatsu</option>
+                <option value="dodge">Dodge</option>
+                <option value="ferrari">Ferrari</option>
+                <option value="ford">Ford</option>
+                <option value="genesis">Genesis</option>
+                <option value="gmc">GMC</option>
+                <option value="honda">Honda</option>
+                <option value="hyundai">Hyundai</option>
+                <option value="infiniti">Infiniti</option>
+                <option value="isuzu">Isuzu</option>
+                <option value="jaguar">Jaguar</option>
+                <option value="jeep">Jeep</option>
+                <option value="kia">Kia</option>
+                <option value="koenigsegg">Koenigsegg</option>
+                <option value="lamborghini">Lamborghini</option>
+                <option value="landrover">Land Rover</option>
+                <option value="lincoln">Lincoln</option>
+                <option value="lotus">Lotus</option>
+                <option value="maserati">Maserati</option>
+                <option value="mazda">Mazda</option>
+                <option value="mcLaren">McLaren</option>
+                <option value="mercedesbenz">Mercedes-Benz</option>
+                <option value="mini">Mini</option>
+                <option value="mitsubishi">Mitsubishi</option>
+                <option value="nissan">Nissan</option>
+                <option value="pagani">Pagani</option>
+                <option value="peugeot">Peugeot</option>
+                <option value="porsche">Porsche</option>
+                <option value="ram">RAM</option>
+                <option value="renault">Renault</option>
+                <option value="rollsroyce">Rolls-Royce</option>
+                <option value="saab">Saab</option>
+                <option value="seat">Seat</option>
+                <option value="skoda">Skoda</option>
+                <option value="smart">Smart</option>
+                <option value="subaru">Subaru</option>
+                <option value="suzuki">Suzuki</option>
+                <option value="tesla">Tesla</option>
+                <option value="toyota">Toyota</option>
+                <option value="volkswagen">Volkswagen</option>
+                <option value="volvo">Volvo</option>
+            </select>
+          </div>
+
+          <div id="product-model-group" class="field model ">
+            <label for="product-model">Модель автомобиля:</label>
+            <select id="product-model">
+                <option value="">Выберите модель</option>
+            </select>
+        </div>
+        <div id="product-year-start-group" class="field start">
+            <label for="product-year-start" >Год:</label>
+            <input type="text" id="product-year-start"  />
+
+        </div>
+            <div id="product-color-group"  class="field color">
+                <label for="product-color">Color:</label>
+                <select  name="product-color" id="product-color" >
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="orange">Orange</option>
+                    <option value="purple">Purple</option>
+                    <option value="brown">Brown</option>
+                    <option value="gray">Gray</option>
+                    <option value="pink">Pink</option>
+                  </select>
+                 </div>
+    
+                   <div id="product-engine-group"  class="field engine">
+                  <label for="product-engine">Engine:</label>
+                  <select name="product-engine" id="product-engine" >
+                    <option value="Allengine">All </option>
+                    <option value="engine1">1 L</option>
+                    <option value="engine1.2">1.2 L</option>
+                    <option value="engine1.4">1.4 L</option>
+                    <option value="engine1.6">1.6 L</option>
+                    <option value="engine1.8">1.8 L</option>
+                    <option value="engine2.0">2.0 L</option>
+                    <option value="engine2.2">2.2 L</option>
+                    <option value="engine2.5">2.5 L</option>
+                    <option value="engine3.0">3.0 L</option>
+                    <option value="engine3.5">3.5 L</option>
+                    <option value="engine4.0">4.0 L</option>
+                  </select>
+                   </div>
+    
+                   <div id="product-km-group"  class="field km ">
+                  <label for="product-km">Km:</label>
+                  <select name="product-km" id="product-km" >
+                    <option value="allkm">All</option>
+                    <option value="01">0 - 10 000</option>
+                    <option value="2030">20 000 - 30 000</option>
+                    <option value="4050">40 000 - 50 000</option>
+                    <option value="6070">60 000 - 70 000</option>
+                    <option value="8090">80 000 - 90 000</option>
+                    <option value="1015">100 000 - 150 000</option>
+                    <option value="1520">150 000 - 200 000</option>
+                    <option value="3040">300 000 - 400 000</option>
+                    <option value="5060">500 000 - 600 000</option>
+                    
+                  </select>
+                   </div>
+    
+                   <div id="product-transmation-group"  class="field transmation">
+    
+                  <label for="product-transmation">Transmition:</label>
+                  <select name="product-transmation" id="product-transmation" >
+                    <option value="alltransmation">all</option>
+                    <option value="automatic">Automatic</option>
+                    <option value="manual">Manual</option>
+                    
+                  </select>
+    
+                   </div>
+    
+                   <div id="product-drive-group" class="field drive" >
+                  <label for="product-drive">Drive:</label>
+                  <select name="product-drive" id="product-drive" >
+                    <option value="alldrive">all</option>
+                    <option value="front">Front</option>
+                    <option value="back">Back</option>
+                    <option value="4x4">4x4</option>
+                    
+                  </select>
+                   </div>
+                  <label for="product-location">Адрес:</label>
+                  <select id="product-location" >
+                      <option value="Dubai">Dubai</option>
+                      <option value="Sharjah">Sharjah</option>
+                      <option value="Abu Dhabi">Abu Dhabi</option>
+                  </select>
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="product-price-group" class="field price">
+            <label for="product-price">Цена товара:</label>
+            <input type="number" id="product-price"  />
+</div>
+
+          <div id="imgedit" >
+            <label for="product-images">Загрузить фотографии:</label>
+            <input type="file" id="product-images" name="images" accept="image/*" multiple  />
+          </div>
+            <label for="product-description">Описание товара:</label>
+            <input type="text" id="product-description"  />
+
+           
+
+            
+
+            
+
+            
+            <div id="part-select-group" class="field part">
+            <label for="part-select">Часть автомобиля</label>
+            <select id="part-select" onchange="applyFilters()">
+                <option value="all">Все части</option>
+                <option value="body">Кузов</option>
+                <option value="suspension">Подвеска</option>
+                <option value="electronics">Электроника</option>
+                <option value="engine">Двигатель и трансмиссия</option>
+                <option value="wheel">Колесо</option>
+                <option value="interior">Салон</option>
+                <option value="cooling">Система охлаждения</option>
+            </select>
+
+                   </div>
+            <div id="product-vacation-group" class="field vacation">
+                <label for="product-vacation">Vacation </label>
+                <select id="product-vacation" onchange="applyFilters()" >
+                    <option value="all">All</option>
+                    <option value="rest">restaurants</option>
+                    <option value="beaches">beaches</option>
+                    <option value="mall">malls</option>               
+                    <option value="erea's">Интересные места</option>
+                </select> 
+              </div>
+
+             
+    
+              
+
+      
+
+
+
+
+
+
+           
+
+            <button onclick="saveProduct()">Сохранить</button> <!-- Кнопка для сохранения изменений -->
+        </div>
+    </div>
+    
+    <script src="profile1.js"></script>
+           
+
+
+
+
+<!-- Модальное окно для редактирования профиля -->
+<div id="edit-profile-modal" class="modal hidden">
+  <div class="modal-content">
+      <span class="close" onclick="closeProfileModal()">&times;</span> <!-- Кнопка закрытия -->
+      <h2>Редактирование профиля</h2>
+      <label for="profile-username">Имя пользователя:</label>
+      <input type="text" id="profile-username" />
+      
+      <label for="profile-phone">Номер телефона:</label>
+      <input type="text" id="profile-phone" />
+
+      <label for="profile-whatsApp">whatsApp:</label>
+      <input type="text" id="profile-whatsApp" />
+
+      <label for="profile-telegram">Telegram:</label>
+      <input type="text" id="profile-telegram" />
+
+      <label for="profile-instagram">Instagram:</label>
+      <input type="text" id="profile-instagram" />
+
+      <label for="profile-website">Website:</label>
+      <input type="text" id="profile-website" />
+
+      <label for="profile-address">Адрес:</label>
+      <input type="text" id="profile-address" />
+
+     
+
+      <button onclick="saveProfile()">Сохранить</button>
+  </div>
+</div>
+
+            
+
+</body>
+</html>    

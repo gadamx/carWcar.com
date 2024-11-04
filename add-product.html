@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить товар</title>
+    <link rel="stylesheet" href="addProduct.css">
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <header>
+        <button id="home-button" onclick="goHome()"><img id="logo" src="Logo.png" alt=""></button>
+        <span id="user-name" class="hidden" onclick="goToProfile()"></span>
+        
+    </header>
+    
+    <main>
+        <h1>Добавить товар</h1>
+        <form id="add-product-form" enctype="multipart/form-data" onsubmit="handleAddProduct(event)">
+            <label for="product-name">Название товара:</label>
+            <input type="text" id="product-name" required>
+            
+            <label for="product-category">Категория товара:</label>
+            <select id="product-category" required onchange="updateBrands()">
+                <option value="all">All</option>
+                <option value="car">Автомобиль</option>
+                <option value="parts">Запчасти</option>
+                <option value="service">Сервис</option>
+                <option value="rent">Аренда</option>
+                <option value="yacht">Яхта</option>
+            </select>
+
+            <div id="product-brand-pgroup">
+            <label for="product-brand">Марка автомобиля:</label>
+            <select id="product-brand"  onchange="updateModels()">
+                <option value="">Выберите марку</option>
+                <option value="audi">Audi</option>
+                <option value="bmw">BMW</option>
+              
+                <option value="">Все марки</option>
+                <option value="acura">Acura</option>
+                <option value="alfaromeo">Alfa Romeo</option>
+                <option value="astonmartin">Aston Martin</option>
+                <option value="audi">Audi</option>
+                <option value="bentley">Bentley</option>
+                <option value="bmw">BMW</option>
+                <option value="bugatti">Bugatti</option>
+                <option value="buick">Buick</option>
+                <option value="cadillac">Cadillac</option>
+                <option value="chevrolet">Chevrolet</option>
+                <option value="chrysler">Chrysler</option>
+                <option value="citroën">Citroën</option>
+                <option value="dacia">Dacia</option>
+                <option value="daewoo">Daewoo</option>
+                <option value="daihatsu">Daihatsu</option>
+                <option value="dodge">Dodge</option>
+                <option value="ferrari">Ferrari</option>
+                <option value="ford">Ford</option>
+                <option value="genesis">Genesis</option>
+                <option value="gmc">GMC</option>
+                <option value="honda">Honda</option>
+                <option value="hyundai">Hyundai</option>
+                <option value="infiniti">Infiniti</option>
+                <option value="isuzu">Isuzu</option>
+                <option value="jaguar">Jaguar</option>
+                <option value="jeep">Jeep</option>
+                <option value="kia">Kia</option>
+                <option value="koenigsegg">Koenigsegg</option>
+                <option value="lamborghini">Lamborghini</option>
+                <option value="landrover">Land Rover</option>
+                <option value="lincoln">Lincoln</option>
+                <option value="lotus">Lotus</option>
+                <option value="maserati">Maserati</option>
+                <option value="mazda">Mazda</option>
+                <option value="mcLaren">McLaren</option>
+                <option value="mercedes">Mercedes-Benz</option>
+                <option value="mini">Mini</option>
+                <option value="mitsubishi">Mitsubishi</option>
+                <option value="nissan">Nissan</option>
+                <option value="pagani">Pagani</option>
+                <option value="peugeot">Peugeot</option>
+                <option value="porsche">Porsche</option>
+                <option value="ram">RAM</option>
+                <option value="renault">Renault</option>
+                <option value="rollsroyce">Rolls-Royce</option>
+                <option value="saab">Saab</option>
+                <option value="seat">Seat</option>
+                <option value="skoda">Skoda</option>
+                <option value="smart">Smart</option>
+                <option value="subaru">Subaru</option>
+                <option value="suzuki">Suzuki</option>
+                <option value="tesla">Tesla</option>
+                <option value="toyota">Toyota</option>
+                <option value="volkswagen">Volkswagen</option>
+                <option value="volvo">Volvo</option>
+            </select>
+            </div>
+
+            <div id="product-model-group">
+            <label for="product-model">Модель автомобиля:</label>
+            <select id="product-model" >
+                <option value="">Выберите модель</option>
+            </select>
+            </div>
+
+            <div id="product-select-group">
+
+            <label for="part-select">Часть автомобиля</label>
+            <select id="part-select" onchange="applyFilters()">
+                <option value="all">Все части</option>
+                <option value="body">Кузов</option>
+                <option value="suspension">Подвеска</option>
+                <option value="electronics">Электроника</option>
+                <option value="engine">Двигатель и трансмиссия</option>
+                <option value="wheel">Колесо</option>
+                <option value="interior">Салон</option>
+                <option value="cooling">Система охлаждения</option>
+            </select>
+            </div>
+ 
+            <div id="product-vacation-group ">
+            <label for="product-vacation">Vacation </label>
+            <select id="product-vacation" >
+                <option value="all">All</option>
+                <option value="rest">restaurants</option>
+                <option value="beaches">beaches</option>
+                <option value="mall">malls</option>               
+                <option value="erea's">Интересные места</option>
+            </select> 
+          </div>
+
+            <div id="product-year-start-group">
+            <label for="product-year-start">Год:</label>
+            <input type="number" id="product-year-start" >
+            </div>
+ 
+            <div id="product-price-group">
+            <label for="product-price">Цена товара:</label>
+            <input type="number" id="product-price" >
+           </div>
+
+
+            <label for="product-location">Адрес:</label>
+            <select id="product-location" >
+                <option value="Dubai">Dubai</option>
+                <option value="Sharjah">Sharjah</option>
+                <option value="Abu Dhabi">Abu Dhabi</option>
+            </select>
+            
+
+
+
+           
+
+
+
+            
+
+
+
+
+
+
+             <div id="product-color-group" >
+            <label for="product-color">Color:</label>
+            <select  id="product-color"  >
+                <option value="white">White</option>
+                <option value="black">Black</option>
+                <option value="yellow">Yellow</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="orange">Orange</option>
+                <option value="purple">Purple</option>
+                <option value="brown">Brown</option>
+                <option value="gray">Gray</option>
+                <option value="pink">Pink</option>
+              </select>
+             </div>
+
+               <div id="product-engine-group" >
+              <label for="product-engine">Engine:</label>
+              <select name="product-engine" id="product-engine" >
+                <option value="Allengine">All </option>
+                <option value="engine1">1 L</option>
+                <option value="engine1.2">1.2 L</option>
+                <option value="engine1.4">1.4 L</option>
+                <option value="engine1.6">1.6 L</option>
+                <option value="engine1.8">1.8 L</option>
+                <option value="engine2.0">2.0 L</option>
+                <option value="engine2.2">2.2 L</option>
+                <option value="engine2.5">2.5 L</option>
+                <option value="engine3.0">3.0 L</option>
+                <option value="engine3.5">3.5 L</option>
+                <option value="engine4.0">4.0 L</option>
+              </select>
+               </div>
+
+               <div id="product-km-group" >
+              <label for="product-km">Km:</label>
+              <select name="product-km" id="product-km" >
+                <option value="allkm">All</option>
+                <option value="01">0 - 10 000</option>
+                <option value="2030">20 000 - 30 000</option>
+                <option value="4050">40 000 - 50 000</option>
+                <option value="6070">60 000 - 70 000</option>
+                <option value="8090">80 000 - 90 000</option>
+                <option value="1015">100 000 - 150 000</option>
+                <option value="1520">150 000 - 200 000>
+                <option value="3040">300 000 - 400 000</option>
+                <option value="5060">500 000 - 600 000</option>
+                
+              </select>
+               </div>
+
+               <div id="product-transmation-group" >
+
+              <label for="product-transmation">Transmition:</label>
+              <select name="product-transmation" id="product-transmation" >
+                <option value="alltransmation">all</option>
+                <option value="automatic">Automatic</option>
+                <option value="manual">Manual</option>
+                
+              </select>
+
+               </div>
+
+               <div id="product-drive-group" >
+              <label for="product-drive">Drive:</label>
+              <select name="product-drive" id="product-drive" >
+                <option value="alldrive">all</option>
+                <option value="front">Front</option>
+                <option value="back">Back</option>
+                <option value="4x4">4x4</option>
+                
+              </select>
+
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <label for="product-images">Загрузить фотографии:</label>
+              <input type="file" id="product-images" accept="image/*" multiple required>
+
+
+
+
+              <label for="product-description">Описание товара:</label>
+              <textarea id="product-description" rows="4" required></textarea>
+
+
+
+
+
+            <button type="submit">Добавить товар</button>
+        </form>
+    </main>
+<script src="hideinput.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function updateModels() {
+            const brand = document.getElementById('product-brand').value;
+            const modelSelect = document.getElementById('product-model');
+            modelSelect.innerHTML = '<option value="">Выберите модель</option>'; // Очистить предыдущие модели
+
+            const models = {
+                audi: ['A1', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'Q2', 'Q3', 'Q5', 'Q7', 'Q8', 'TT', 'R8', 'e-tron GT', 'RS3', 'RS4', 'RS5', 'RS6', 'RS7', 'RS Q3', 'RS Q8', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8'],
+                acura: ['ILX', 'TLX', 'RLX', 'RDX', 'MDX', 'NSX', 'Integra', 'Legend', 'Vigor', 'CL', 'RSX', 'TSX', 'ZDX', 'SLX', 'EL', 'CSX'],
+                alfaromeo: ['Giulia', 'Stelvio', '4C', 'GTV', 'Spider', 'Alfetta', 'Mito', 'Giulietta', 'Brera', '166', '159', '156', '147', '145', '33', 'Montreal'],
+                astonmartin: ['DBX', 'Vantage', 'DB11', 'DBS', 'Rapide', 'Vanquish', 'Vulcan', 'One-77', 'Lagonda', 'DB9', 'DB7', 'Virage', 'V8 Vantage', 'V12 Vantage', 'Cygnet', 'DB5'],
+                bmw: ['1 Series', '2 Series', '3 Series', '4 Series', '5 Series', '6 Series', '7 Series', '8 Series', 'X1', 'X2', 'X3', 'X4', 'X5', 'X6', 'X7', 'Z4', 'i3', 'i4', 'i8', 'iX', 'M2', 'M3', 'M4', 'M5', 'M6', 'M8', 'X3 M', 'X5 M', 'X6 M'],
+                bentley: ['Bentayga', 'Continental GT', 'Flying Spur', 'Mulsanne', 'Azure', 'Brooklands', 'Arnage', 'Turbo R', 'Continental R', 'Eight', 'T Series', 'Mark VI'],
+                bugatti: ['Chiron', 'Veyron', 'Divo', 'Centodieci', 'La Voiture Noire', 'Bolide', 'EB110', 'Type 57', 'Type 41 Royale', 'Type 35', 'Type 32', 'Type 13'],
+                buick: ['Enclave', 'Encore', 'Encore GX', 'Envision', 'Regal', 'LaCrosse', 'Cascada', 'Verano', 'Lucerne', 'Park Avenue', 'LeSabre', 'Century', 'Roadmaster', 'Skylark', 'Riviera', 'Wildcat'],
+                cadillac: ['Escalade', 'XT5', 'XT4', 'XT6', 'CT4', 'CT5', 'CT6', 'ATS', 'XTS', 'CTS', 'SRX', 'DTS', 'STS', 'Seville', 'DeVille', 'Fleetwood', 'Eldorado', 'Cimarron', 'Brougham', 'Allante'],
+                chevrolet: ['Silverado', 'Tahoe', 'Suburban', 'Colorado', 'Traverse', 'Equinox', 'Blazer', 'Trailblazer', 'Malibu', 'Impala', 'Camaro', 'Corvette', 'Spark', 'Sonic', 'Bolt', 'Cruze', 'Avalanche', 'Avalon', 'Caprice', 'Cobalt'],
+                chrysler: ['300', 'Pacifica', 'Voyager', 'Aspen', 'Crossfire', 'Sebring', 'Town & Country', 'Concorde', 'LHS', 'PT Cruiser', 'Cirrus', 'LeBaron', 'New Yorker', 'Imperial', 'Fifth Avenue'],
+                citroën: ['C1', 'C3', 'C3 Aircross', 'C4', 'C4 Cactus', 'C4 Picasso', 'C4 SpaceTourer', 'C5', 'C5 Aircross', 'C6', 'Berlingo', 'DS3', 'DS4', 'DS5', 'Saxo', 'Xantia', 'XM', 'ZX'],
+                dacia: ['Duster', 'Sandero', 'Logan', 'Lodgy', 'Dokker', 'Spring', 'Solenza', '1310', '1100', '500', '1300', 'Nova', 'SuperNova'],
+                daihatsu: ['Charade', 'Terios', 'Copen', 'Mira', 'Move', 'Sirion', 'Cuore', 'Rocky', 'Feroza', 'Applause', 'Materia', 'Hijet', 'YRV', 'Tanto', 'Bee', 'Max', 'Gran Max'],
+                dodge: ['Charger', 'Challenger', 'Durango', 'Ram', 'Journey', 'Dart', 'Grand Caravan', 'Viper', 'Avenger', 'Nitro', 'Magnum', 'Caliber', 'Stratus', 'Neon', 'Intrepid'],
+
+                ferrari: ['488', 'SF90 Stradale', 'F8 Tributo', '812 Superfast', 'Roma', 'Portofino', 'LaFerrari', '458', 'California', 'Enzo', 'F40', 'Testarossa', 'Monza SP1', 'Monza SP2', 'GTC4Lusso'],
+                fiat: ['500', '500X', '500L', 'Panda', 'Tipo', 'Punto', 'Ducato', 'Uno', 'Qubo', 'Linea', 'Multipla', 'Doblo', 'Strada', 'Fiorino', 'Bravo'],
+                ford: ['F-150', 'Mustang', 'Explorer', 'Escape', 'Edge', 'Bronco', 'Expedition', 'Ranger', 'Fiesta', 'Focus', 'Fusion', 'Taurus', 'C-Max', 'EcoSport', 'Transit'],
+                genesis: ['G70', 'G80', 'G90', 'GV70', 'GV80'],
+                gmc: ['Sierra', 'Canyon', 'Yukon', 'Acadia', 'Terrain', 'Savanna', 'Envoy'],
+                honda: ['Civic', 'Accord', 'CR-V', 'Pilot', 'HR-V', 'Ridgeline', 'Odyssey', 'Fit', 'Passport', 'Element', 'Prelude', 'S2000', 'Insight', 'Clarity'],
+                hyundai: ['Elantra', 'Sonata', 'Tucson', 'Santa Fe', 'Palisade', 'Kona', 'Veloster', 'Accent', 'Ioniq', 'Venue', 'Genesis Coupe', 'Azera'],
+                infiniti: ['Q50', 'Q60', 'QX50', 'QX60', 'QX80', 'G37', 'FX35', 'EX35', 'M37', 'JX35', 'Q30'],
+                isuzu: ['D-Max', 'MU-X', 'Trooper', 'Rodeo', 'Axiom', 'VehiCROSS', 'Ascender', 'Amigo', 'Hombre'],
+                jaguar: ['F-Type', 'XF', 'XE', 'XJ', 'F-Pace', 'E-Pace', 'I-Pace', 'XK', 'S-Type', 'X-Type'],
+                jeep: ['Wrangler', 'Grand Cherokee', 'Cherokee', 'Compass', 'Renegade', 'Gladiator', 'Patriot', 'Commander', 'Liberty'],
+                kia: ['Optima', 'Soul', 'Sorento', 'Sportage', 'Telluride', 'Seltos', 'Rio', 'Forte', 'Stinger', 'Carnival', 'Niro', 'K900'],
+                koenigsegg: ['Agera', 'Regera', 'Jesko', 'Gemera', 'CCX', 'One:1', 'CCR', 'CC8S'],
+                lamborghini: ['Aventador', 'Huracan', 'Urus', 'Gallardo', 'Murcielago', 'Diablo', 'Countach', 'Reventon', 'Sian', 'Veneno'],
+                landrover: ['Range Rover', 'Range Rover Sport', 'Range Rover Velar', 'Range Rover Evoque', 'Discovery', 'Discovery Sport', 'Defender', 'Freelander'],
+                lexus: ['ES', 'IS', 'LS', 'GS', 'RX', 'NX', 'UX', 'GX', 'LX', 'RC', 'LC', 'LFA'],
+                lincoln: ['Navigator', 'Aviator', 'Corsair', 'Nautilus', 'MKC', 'MKT', 'MKX', 'MKZ', 'Continental', 'Town Car'],
+                lotus: ['Evora', 'Elise', 'Exige', 'Emira', 'Esprit', 'Europa', 'Elite', 'Eclat', 'Seven'],
+                maserati: ['Ghibli', 'Levante', 'Quattroporte', 'GranTurismo', 'GranCabrio', 'MC20'],
+                mazda: ['Mazda3', 'Mazda6', 'CX-3', 'CX-5', 'CX-9', 'CX-30', 'MX-5 Miata', 'RX-8', 'RX-7', 'BT-50', 'Mazda2'],
+                mclaren: ['720S', '650S', '570S', '600LT', 'Senna', 'P1', 'GT', '765LT', 'Artura', 'Speedtail'],
+                mercedesbenz: ['A-Class', 'C-Class', 'E-Class', 'S-Class', 'GLA', 'GLB', 'GLC', 'GLE', 'GLS', 'G-Class', 'AMG GT', 'CLA', 'CLS', 'SLS AMG', 'V-Class'],
+                mini: ['Cooper', 'Cooper S', 'Clubman', 'Countryman', 'Paceman', 'Convertible', 'John Cooper Works'],
+                mitsubishi: ['Outlander', 'Eclipse Cross', 'ASX', 'Pajero', 'Lancer', 'Mirage', 'Galant', 'Montero', 'Evolution', 'Endeavor'],
+                nissan: ['Altima', 'Sentra', 'Maxima', 'Rogue', 'Murano', 'Pathfinder', 'Armada', 'Frontier', 'Titan', '370Z', 'GT-R', 'Juke', 'Kicks', 'Versa', 'Leaf'],
+                pagani: ['Zonda', 'Huayra', 'Imola'],
+                peugeot: ['208', '308', '508', '2008', '3008', '5008', 'Partner', 'Rifter', 'Expert', 'Traveller', '206', '207', '407', '605'],
+                porsche: ['911', 'Cayenne', 'Macan', 'Panamera', 'Taycan', '718 Cayman', '718 Boxster', 'Carrera GT'],
+                ram: ['1500', '2500', '3500', 'ProMaster', 'ProMaster City'],
+                renault: ['Clio', 'Megane', 'Captur', 'Kadjar', 'Talisman', 'Koleos', 'Scenic', 'Espace', 'Duster', 'Twingo', 'Fluence'],
+                rollsroyce: ['Phantom', 'Ghost', 'Wraith', 'Dawn', 'Cullinan', 'Silver Shadow', 'Silver Ghost', 'Silver Spur', 'Corniche'],
+                saab: ['9-3', '9-5', '900', '9000', '9-4X', '9-7X'],
+                seat: ['Ibiza', 'Leon', 'Ateca', 'Arona', 'Tarraco', 'Alhambra', 'Toledo', 'Cordoba'],
+                skoda: ['Octavia', 'Superb', 'Fabia', 'Kodiaq', 'Karoq', 'Kamiq', 'Scala', 'Citigo', 'Yeti'],
+                smart: ['Fortwo', 'Forfour', 'Roadster'],
+                subaru: ['Impreza', 'Outback', 'Forester', 'Crosstrek', 'WRX', 'Legacy', 'Ascent', 'BRZ', 'Baja', 'SVX'],
+                suzuki: ['Swift', 'Vitara', 'SX4', 'Jimny', 'Baleno', 'Alto', 'Celerio', 'Ignis', 'Kizashi', 'Ertiga', 'Grand Vitara'],
+                tesla: ['Model S', 'Model 3', 'Model X', 'Model Y', 'Cybertruck', 'Roadster'],
+                toyota: ['Corolla', 'Camry', 'Prius', 'RAV4', 'Highlander', 'Land Cruiser', 'Tacoma', 'Tundra', 'Avalon', 'Supra', '4Runner', 'Sienna', 'Yaris'],
+                volkswagen: ['Golf', 'Passat', 'Tiguan', 'Jetta', 'Atlas', 'Touareg', 'Arteon', 'Beetle', 'Polo', 'ID.4'],
+                volvo: ['XC40', 'XC60', 'XC90', 'S60', 'S90', 'V60', 'V90', 'C40', 'V40'],
+                                    
+
+            };
+
+            if (models[brand]) {
+                models[brand].forEach(model => {
+                    const option = document.createElement('option');
+                    option.value = model;
+                    option.textContent = model;
+                    modelSelect.appendChild(option);
+                });
+            }
+        }
+
+        async function handleAddProduct(event) {
+            event.preventDefault();
+            
+            const formData = new FormData();
+            formData.append('name', document.getElementById('product-name').value);
+            formData.append('price', document.getElementById('product-price').value);
+            formData.append('category', document.getElementById('product-category').value);
+            formData.append('brand', document.getElementById('product-brand').value);
+            formData.append('model', document.getElementById('product-model').value);
+            formData.append('yearStart', document.getElementById('product-year-start').value);
+            formData.append('location', document.getElementById('product-location').value);
+            formData.append('part', document.getElementById('part-select').value);
+            formData.append('vacation', document.getElementById('product-vacation').value);
+            formData.append('drive', document.getElementById('product-drive').value);
+            formData.append('km', document.getElementById('product-km').value);
+            formData.append('color', document.getElementById('product-color').value);
+            formData.append('transmation', document.getElementById('product-transmation').value);
+            formData.append('engine', document.getElementById('product-engine').value);
+
+            
+            // Добавляем все изображения
+            const productImages = document.getElementById('product-images').files;
+            for (let i = 0; i < productImages.length; i++) {
+                formData.append('image', productImages[i]);
+            }
+
+            formData.append('note', document.getElementById('product-description').value);
+            
+            const params = new URLSearchParams(window.location.search);
+            const userId = params.get('userId');
+            formData.append('userId', userId);
+
+            try {
+                const response = await fetch('http://localhost:5000/add-product', {
+                    method: 'POST',
+                    body: formData,
+                });
+
+                if (!response.ok) throw new Error('Ошибка добавления товара');
+                alert('Товар успешно добавлен!');
+                window.location.href = 'profile.html?userId=' + userId;
+            } catch (error) {
+                alert(error.message);
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+// start test
+document.getElementById('product-category').addEventListener('change', function() {
+    const category = this.value;
+
+    // Получаем все необходимые элементы
+    const productName = document.getElementById('product-name').parentElement;
+    const productPrice = document.getElementById('product-price').parentElement;
+    const productBrand = document.getElementById('product-brand').parentElement;
+    const productModel = document.getElementById('product-model').parentElement;
+    const productYearStart = document.getElementById('product-year-start').parentElement;
+    const productLocation = document.getElementById('product-location').parentElement;
+    const partSelect = document.getElementById('part-select').parentElement;
+    const productImages = document.getElementById('product-images').parentElement;
+    const productDescription = document.getElementById('product-description').parentElement;
+    const productVacation = document.getElementById('product-vacation').parentElement;
+    const productDrive = document.getElementById('product-drive').parentElement;
+    const productColor = document.getElementById('product-color').parentElement;
+    const productKm = document.getElementById('product-km').parentElement;
+    const productTransmation = document.getElementById('product-transmation').parentElement;
+    const productEngine = document.getElementById('product-engine').parentElement;
+    // Скрываем все элементы
+    const allElements = [productName, productPrice, productBrand, productModel, productYearStart, productLocation, partSelect, productTransmation, productEngine, productColor, productKm, productDrive, productImages, productDescription, productVacation];
+    allElements.forEach(el => el.classList.add('hidden')); // скрываем все элементы
+
+    // Показать нужные элементы в зависимости от категории
+    if (category === 'car' || category === 'rent') {
+        productName.classList.remove('hidden');
+        productPrice.classList.remove('hidden');
+        productBrand.classList.remove('hidden');
+        productModel.classList.remove('hidden');
+        productYearStart.classList.remove('hidden');
+        productLocation.classList.remove('hidden');
+        productImages.classList.remove('hidden');
+        productDescription.classList.remove('hidden');
+        productEngine.classList.remove('hidden');
+        
+        // Показываем только для "car" и "rent"
+        productDrive.classList.remove('hidden');
+        productKm.classList.remove('hidden');
+        productColor.classList.remove('hidden');
+        productTransmation.classList.remove('hidden');
+    } else if (category === 'parts') {
+        productName.classList.remove('hidden');
+        productPrice.classList.remove('hidden');
+        productBrand.classList.remove('hidden');
+        productModel.classList.remove('hidden');
+        productYearStart.classList.remove('hidden');
+        productLocation.classList.remove('hidden');
+        partSelect.classList.remove('hidden');
+        productImages.classList.remove('hidden');
+        productDescription.classList.remove('hidden');
+        productEngine.classList.remove('hidden');
+    } else if (category === 'service') {
+        productName.classList.remove('hidden');
+        productBrand.classList.remove('hidden');
+        partSelect.classList.remove('hidden');
+        productImages.classList.remove('hidden');
+        productDescription.classList.remove('hidden');
+    } else if (category === 'yacht') {
+        productVacation.classList.remove('hidden');
+        productName.classList.remove('hidden');
+        productLocation.classList.remove('hidden');
+        productImages.classList.remove('hidden');
+        productDescription.classList.remove('hidden');
+    }
+});
+// end test
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">CarTkom</string>
+    <string name="title_activity_main">CarTkom</string>
+    <string name="package_name">com.cartkom.myapp</string>
+    <string name="custom_url_scheme">com.cartkom.myapp</string>
+</resources>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    
+    <link rel="stylesheet" href="style33.css">
+    <link rel="stylesheet" href="profile.html">
+  
+</head>
+<body>
+    <header>
+        <button id="home-button" onclick="goHome()"><img id="logo" src="Logo.png" alt=""></button>
+       
+        <div id="quick-access">
+            <button onclick="filterByCategory('all')">Все</button>
+            <button onclick="filterByCategory('car')">Автомобили</button>
+            <button onclick="filterByCategory('parts')">Запчасти</button>
+            <button onclick="filterByCategory('service')">Сервис</button>
+            <button onclick="filterByCategory('rent')">Аренда</button>
+            <button onclick="filterByCategory('yacht')">Яхты</button>
+        
+
+        
+        </div>
+
+      
+        <a id="addItemm" href="javascript:void(0);"><button  onclick="handleAddProductClick()">Add Item</button></a>
+        <span id="user-name" class="hidden" onclick="goToProfile()"></span>
+        <button id="login-button" onclick="showPopup()">Login</button>
+      
+    </header>
+
+    <main>
+
+<!-- Категории -->
+ 
+
+
+
+
+
+
+<div class="container5">
+    <div class="search-line">
+        <form id="search-space" onsubmit="handleSearch(event)">
+            <div class="search-wrapper">
+                <input id="search-input" type="text" placeholder="Поиск...">
+                <button id="clear-search" type="button" class="clear-btn hidden">Clear</button>
+          
+            
+            <button id="searchBottom" type="submit" class="search-btn">Поиск</button>
+        </div>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+<div id="container">
+   
+    <div id="filters">
+        <div class="filter-group" id="category-select">
+            <label for="category-select">Категория</label>
+            <select id="category-select" onchange="applyFilters(); toggleFields()">
+                <option value="all">Все категории</option>
+                <option value="car">Автомобили</option>
+                <option value="parts">Запчасти</option>
+                <option value="service">Сервис</option>
+                <option value="rent">Аренда</option>
+                <option value="yacht">Яхты</option>
+            </select>
+        </div>
+
+        <div class="filter-group hidden">
+            <label for="brand-select">Марка</label>
+            <select id="brand-select" onchange="updateModels()">
+                <option value="">Все марки</option>
+                <option value="acura">Acura</option>
+                <option value="alfaromeo">Alfa Romeo</option>
+                <option value="astonmartin">Aston Martin</option>
+                <option value="audi">Audi</option>
+                <option value="bentley">Bentley</option>
+                <option value="bmw">BMW</option>
+                <option value="bugatti">Bugatti</option>
+                <option value="buick">Buick</option>
+                <option value="cadillac">Cadillac</option>
+                <option value="chevrolet">Chevrolet</option>
+                <option value="chrysler">Chrysler</option>
+                <option value="citroën">Citroën</option>
+                <option value="dacia">Dacia</option>
+                <option value="daewoo">Daewoo</option>
+                <option value="daihatsu">Daihatsu</option>
+                <option value="dodge">Dodge</option>
+                <option value="ferrari">Ferrari</option>
+                <option value="ford">Ford</option>
+                <option value="genesis">Genesis</option>
+                <option value="gmc">GMC</option>
+                <option value="honda">Honda</option>
+                <option value="hyundai">Hyundai</option>
+                <option value="infiniti">Infiniti</option>
+                <option value="isuzu">Isuzu</option>
+                <option value="jaguar">Jaguar</option>
+                <option value="jeep">Jeep</option>
+                <option value="kia">Kia</option>
+                <option value="koenigsegg">Koenigsegg</option>
+                <option value="lamborghini">Lamborghini</option>
+                <option value="landrover">Land Rover</option>
+                <option value="lincoln">Lincoln</option>
+                <option value="lotus">Lotus</option>
+                <option value="maserati">Maserati</option>
+                <option value="mazda">Mazda</option>
+                <option value="mcLaren">McLaren</option>
+                <option value="mercedes">Mercedes-Benz</option>
+                <option value="mini">Mini</option>
+                <option value="mitsubishi">Mitsubishi</option>
+                <option value="nissan">Nissan</option>
+                <option value="pagani">Pagani</option>
+                <option value="peugeot">Peugeot</option>
+                <option value="porsche">Porsche</option>
+                <option value="ram">RAM</option>
+                <option value="renault">Renault</option>
+                <option value="rollsroyce">Rolls-Royce</option>
+                <option value="saab">Saab</option>
+                <option value="seat">Seat</option>
+                <option value="skoda">Skoda</option>
+                <option value="smart">Smart</option>
+                <option value="subaru">Subaru</option>
+                <option value="suzuki">Suzuki</option>
+                <option value="tesla">Tesla</option>
+                <option value="toyota">Toyota</option>
+                <option value="volkswagen">Volkswagen</option>
+                <option value="volvo">Volvo</option>
+                
+            </select>
+        </div>
+
+        <div class="filter-group hidden">
+            <label for="model-select">Модель</label>
+            <select id="model-select">
+                <option value="">Все модели</option>
+            </select>
+        </div>
+        <div class="filter-group hidden" id="part-filter-group">
+            <label for="part-select">Часть авто</label>
+            <select id="part-select" onchange="applyFilters()">
+                <option value="all">Все части</option>
+                <option value="body">Кузов</option>
+                <option value="suspension">Подвеска</option>
+                <option value="electronics">Электроника</option>
+                <option value="engine">Двигатель и трансмиссия</option>
+                <option value="wheel">Колесо</option>
+                <option value="interior">Салон</option>
+                <option value="cooling">Система охлаждения</option>
+            </select>
+        </div>
+
+        <div class="filter-group hidden" id="yacht-filter-group">
+            <label for="yacht-select">interesting  </label>
+            <select id="yacht-select" onchange="applyFilters()">
+                <option value="all">All</option>
+                <option value="rest">restaurants</option>
+                <option value="beaches">beaches</option>
+                <option value="mall">malls</option>               
+                <option value="erea's">Интересные места</option>
+            </select>
+        </div>
+        
+        <div class="filter-group hidden">
+            <label for="year-from">Год с</label>
+            <select id="year-from">
+                <option value="">Год с</option>
+                <script>
+                    for (let year = 1950; year <= 2025; year++) {
+                        document.write(`<option value="${year}">${year}</option>`);
+                    }
+                </script>
+            </select>
+        </div>
+
+        <div class="filter-group hidden">
+            <label for="year-to">Год по</label>
+            <select id="year-to">
+                <option value="">Год по</option>
+                <script>
+                    for (let year = 1950; year <= 2025; year++) {
+                        document.write(`<option value="${year}">${year}</option>`);
+                    }
+                </script>
+            </select>
+        </div>
+
+        <div class="filter-group hidden" id="price-filter-group">
+            <label for="price-from">Цена от</label>
+            <input type="number" id="price-from" placeholder="Цена от">
+        </div>
+
+        <div class="filter-group hidden">
+            <label for="price-to">Цена до</label>
+            <input type="number" id="price-to" placeholder="Цена до">
+        </div>
+
+        <div class="filter-group hidden">
+            <label for="location-select">Местоположение</label>
+            <select id="location-select">
+                <option value="">Все локации</option>
+                <option value="dubai">Dubai</option>
+                <option value="sharjah">Sharjah</option>
+                <option value="abu-dhabi">Abu Dhabi</option>
+            </select>
+        </div>
+
+        <div class="filter-group ">
+            <button type="button" onclick="applyFilters()">Ok</button>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+<div id="ads">
+    
+    <div class="ad-circle" onclick="adClicked('Ссылка_на_рекламу_1')">
+        <img src="audir8.png" alt="Реклама 1">
+        <span>Реклама 1</span>
+    </div>
+    <div class="ad-circle" onclick="adClicked('Ссылка_на_рекламу_2')">
+        <img src="cadillac.jpg" alt="Реклама 2">
+        <span>Реклама 2</span>
+    </div>
+    <div class="ad-circle" onclick="adClicked('Ссылка_на_рекламу_3')">
+        <img src="mers.png" alt="Реклама 3">
+        <span>Реклама 3</span>
+    </div>
+    <div class="ad-circle" onclick="adClicked('Ссылка_на_рекламу_4')">
+        <img src="lambo.png" alt="Реклама 4">
+        <span>Реклама 4</span>
+    </div>
+    <div class="ad-circle" onclick="adClicked('Ссылка_на_рекламу_5')">
+        <img src="sl63.png" alt="Реклама 5">
+        <span>Реклама 5</span>
+    </div>
+    <div class="ad-circle" onclick="adClicked('Ссылка_на_рекламу_6')">
+        <img src="mrs12.png" alt="Реклама 6">
+        <span>Реклама 6</span>
+    </div>
+</div>
+
+
+
+    <div id="product-list"></div>
+
+
+
+
+
+
+        
+
+        
+
+
+        
+
+
+
+
+        <div id="pagination">
+            <button class="page" id="prev" disabled>Назад</button>
+            <span class="page" id="page-info">Страница 1 из 1</span>
+            <button class="page" id="next">Вперед</button>
+        </div>
+    </main>
+
+    
+
+    <div id="overlay" class="hidden" onclick="hidePopup()"></div>
+    <div id="popup" class="hidden">
+        <button class="close-button" onclick="hidePopup()">X</button>
+        <div id="auth-container">
+            <h2 id="auth-title">Авторизация</h2>
+            
+            <form id="login-form" onsubmit="handleLogin(event)">
+                <label id="loginObekct" for="login-username">Имя пользователя:</label>
+                <input type="text" id="login-username" required>
+                <label  id="loginObekct" for="login-password">Пароль:</label>
+                <input type="password" id="login-password" required>
+                <button type="submit">Войти</button>
+                <p>Нет аккаунта? <a href="#" onclick="toggleForms()">Зарегистрируйтесь</a></p>
+            </form>
+            <div id="register-form" class="hidden">
+                <h3>Выберите тип регистрации:</h3>
+                <label>
+                    <input type="radio" name="registration-type" value="user" checked onclick="toggleCompanyFields()"> Persanal 
+                </label>
+                <label>
+                    <input type="radio" name="registration-type" value="company" onclick="toggleCompanyFields()"> Company
+                </label>
+                <br>
+                <label for="register-username">Имя пользователя:</label>
+                <input type="text" id="register-username" required>
+                
+                <label for="register-phone">Номер телефона:</label>
+                <input type="tel" id="register-phone" required>
+
+                <label for="register-whatsApp">WhatsApp:</label>
+                <input type="tel" id="register-whatsApp" required>
+
+                <label for="register-telegram">Telegram:</label>
+                <input type="tel" id="register-telegram" required>
+
+                <label for="register-instagram">Instagram:</label>
+                <input type="tel" id="register-instagram" required>
+
+                <label for="register-website">Website:</label>
+                <input type="tel" id="register-website" required>
+                
+                <label for="register-email">Email:</label>
+                <input type="email" id="register-email" required>
+                
+                <label for="register-address">Адрес:</label>
+                <input type="text" id="register-address" required>
+                
+                <label for="register-password">Пароль:</label>
+                <input type="password" id="register-password" required>
+                
+                <div id="company-fields" class="hidden">
+                    <label for="register-company-name">Название компании:</label>
+                    <input type="text" id="register-company-name" required>
+            
+                    <label for="register-license-number">Номер лицензии:</label>
+                    <input type="text" id="register-license-number" required>
+                </div>
+            
+                <button  type="submit" onclick="handleRegister(event)">Зарегистрироваться</button>
+                <p>Уже есть аккаунт? <a    href="#" onclick="toggleForms()">Войдите</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+
+    <div id="footer">
+        <div id="colum1">
+          <ul>
+           <li>About</li>
+           <li>Contact</li>
+           <li>Adress</li>
+           <li>Partners</li>
+           <li>Map</li>
+          </ul>
+         </div>
+        
+         
+         
+   
+           <div id="colum2">
+               <ul>
+                <li>Instagram</li>
+                <li>Facebook</li>
+                <li>Telegram</li>
+                <li>Tik Tok</li>
+                <li>News</li>
+               </ul>
+              </div>
+     </div>
+
+  
+
+    
+
+
+     
+
+
+
+
+</body>
+</html>

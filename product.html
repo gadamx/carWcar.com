@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Информация о товаре</title>
+   <link rel="stylesheet" href="product.css">
+   
+ 
+</head>
+
+<header>
+    <button id="home-button" onclick="goHome()"><img id="logo" src="Logo.png" alt=""></button>
+   
+   
+
+    
+
+
+  
+    <a href="javascript:void(0);"><button onclick="handleAddProductClick()">Добавить товар</button></a>
+    <span id="user-name" class="hidden" onclick="goToProfile()"></span>
+    <button id="login-button" onclick="showPopup()">Login</button>
+  
+</header>
+
+
+<body>
+
+
+
+       <div id="product-content">
+    
+               <div id="product-img-window">
+   
+                <button id="prev-image" onclick="prevImage()">←</button>
+                      <div id="product-images">
+                              <div id="imgbottann"></div>
+
+                             <img id="product-images" alt="Изображение товара">
+
+        
+
+                        </div>
+                           
+                            <button id="next-image" onclick="nextImage()">→</button>
+
+      
+                               
+                    </div>   
+<div id="infopro">
+                    <div id="product-name-price">
+                        <h1 id="product-name"></h1>
+                
+                       <h1 id="product-price"></h1>
+                   </div>
+        <div id="product-details">
+
+
+
+
+            <div id="product-category-window">
+                <h2 id="product-category">Category:</h2>
+             </div>
+            
+             <div id="product-mark-window" class="category-section hidden">
+                <h2 id="product-brand"></h2>
+             </div>
+
+             <div id="product-Model-window" class="category-section hidden">
+                <h2 id="product-model"> </h2>
+             </div>
+        
+             <div id="product-year-window" class="category-section hidden">
+                <h2 id="product-yearStart">  </h2>
+             </div>
+        
+             <div id="product-part-window" class="category-section hidden">
+                <h2 id="product-part">  </h2>
+             </div>
+
+             <div id="product-drive-window" class="category-section hidden">
+                <h2 id="product-drive">  </h2>
+             </div>
+
+             <div id="product-km-window" class="category-section hidden">
+                <h2 id="product-km">  </h2>
+             </div>
+
+             <div id="product-mator-window" class="category-section hidden">
+                <h2 id="product-engine">  </h2>
+             </div>
+
+             <div id="product-transmation-window" class="category-section hidden">
+                <h2 id="product-transmation">  </h2>
+             </div>
+
+             <div id="product-color-window" class="category-section hidden">
+                <h2 id="product-color"></h2>
+             </div>
+
+           
+
+        <div id="product-location-window">
+           <h2 id="product-location"></h2>
+        </div>
+
+                        
+
+                        <div id="seller-name-window">  
+                            <h2><strong>Продавец:</strong> <span id="seller-name"></span></h2>
+                        </div>
+                        <div id="seller-company-window">  
+                            <h2><strong>Company:</strong> <span id="seller-company"></span></h2>
+                        </div>
+
+                       <div id="seller-phone">
+                         <h2><strong>Телефон:</strong> <span id="seller-phone"></h2> <!-- Отображаем телефон продавца -->
+                       </div>
+                       <div id="seller-whatsApp">
+                        <h2><strong>WhatsApp:</strong> <span id="seller-whatsApp"></span> </h2> </a>
+                      </div>
+                      <div id="seller-telegram">
+                        <h2><strong>Telegram:</strong>  <span id="seller-telegram"></span> </h2> </a>
+                      </div>
+                       
+                      <div id="seller-instagram">
+                        <h2><strong>Instagram:</strong>  <span id="seller-instagram"></span> </h2> </a>
+                      </div>
+                      <div id="seller-website">
+                        <h2><strong>Website:</strong>  <span id="seller-website"></span> </h2> </a>
+                      </div>
+    </div>
+    
+</div>
+    </div>
+
+
+
+<div id="note-coment">
+
+
+    <div id="product-note-window">
+        <p id="product-note"></p>
+     </div>
+
+     <div id="comments-section">
+        <h3>Комментарии</h3>
+        <div id="comments-list">
+            <!-- Здесь будут отображаться комментарии -->
+        </div>
+        
+        <div id="comment-form">
+            <textarea id="comment-text" placeholder="Оставьте комментарий"></textarea>
+            <button id="submit-comment" onclick="submitComment()">Send</button>
+        </div>
+    </div>
+
+</div>
+
+  <div id="footer">
+     <div id="colum1">
+       <ul>
+        <li>O nas </li>
+        <li>Contact</li>
+        <li>Adress</li>
+        <li>Cotrudnichat</li>
+        <li>Polise</li>
+       </ul>
+      </div>
+     
+      
+
+        <div id="colum5">
+            <ul>
+             <li>Instahram</li>
+             <li>Facebook</li>
+             <li>Telegram</li>
+             <li>Tik Tol</li>
+             <li>News</li>
+            </ul>
+           </div>
+  </div>
+
+    <script>
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const savedUsername = localStorage.getItem('username');
+    const userNameElement = document.getElementById('user-name');
+    const loginButtonElement = document.getElementById('login-button');
+
+    if (savedUsername && userNameElement && loginButtonElement) {
+        console.log('Имя пользователя:', savedUsername);
+        userNameElement.textContent = savedUsername;
+        userNameElement.classList.remove('hidden');
+        loginButtonElement.classList.add('hidden');
+    } else {
+        console.log('Элементы не найдены или пользователь не авторизован');
+    }
+});
+
+
+
+        const params = new URLSearchParams(window.location.search);
+        const productId = params.get('id');
+
+        async function fetchProductDetails() {
+    try {
+        const response = await fetch(`http://localhost:5000/product/${productId}`);
+        const product = await response.json();
+        console.log(product);  // Добавьте это для проверки
+
+
+       
+                document.getElementById('product-name').textContent = product.name;
+                document.getElementById('product-price').textContent = `Price: ${product.price} руб.`;
+                document.getElementById('product-category').textContent = `Category: ${product.category}`;
+                document.getElementById('product-part').textContent = `Part: ${product.part}`;
+                document.getElementById('product-location').textContent = `Адрес: ${product.location}`;
+                document.getElementById('product-yearStart').textContent = `Year: ${product.yearStart}`;
+                document.getElementById('product-model').textContent = `Model: ${product.model}`;
+                document.getElementById('product-brand').textContent = `Brand: ${product.brand}`;
+                document.getElementById('product-drive').textContent = `Drive: ${product.drive}`;
+                document.getElementById('product-km').textContent = `Km: ${product.km}`;
+                document.getElementById('product-color').textContent = `Color: ${product.color}`;
+                document.getElementById('product-transmation').textContent = `Transmation: ${product.transmation}`;
+                document.getElementById('product-engine').textContent = `Engine: ${product.engine}`;
+
+                if (product.userId) {
+                    document.getElementById('seller-company').textContent = product.userId.companyName;
+                    document.getElementById('seller-name').textContent = product.userId.username;
+                    document.getElementById('seller-phone').textContent = product.userId.phone;
+                    document.getElementById('seller-website').textContent = product.userId.website;
+                    document.getElementById('seller-instagram').textContent = product.userId.instagram;
+                    document.getElementById('seller-telegram').textContent = product.userId.telegram;
+                    document.getElementById('seller-whatsApp').textContent = product.userId.whatsApp;
+                }
+
+                // Вызов функции скрытия/показа полей на основе категории после загрузки данных о продукте
+
+        
+
+
+
+
+
+        toggleFieldsByCategory(product.category);
+            } catch (error) {
+                console.error('Ошибка при загрузке товара:', error);
+            }
+        }
+
+        // Функция скрытия/показа полей на основе категории товара
+        function toggleFieldsByCategory(category) {
+            console.log('Текущая категория:', category);
+
+            const brandField = document.getElementById('product-mark-window');
+            const modelField = document.getElementById('product-Model-window');
+            const yearField = document.getElementById('product-year-window');
+            const partField = document.getElementById('product-part-window');
+            const driveField = document.getElementById('product-drive-window');
+            const kmField = document.getElementById('product-km-window');
+            const engineField = document.getElementById('product-mator-window');
+            const transmationField = document.getElementById('product-transmation-window');
+            const colorField = document.getElementById('product-color-window');
+
+            // Скрыть все поля по умолчанию
+            brandField.classList.add('hidden');
+            modelField.classList.add('hidden');
+            yearField.classList.add('hidden');
+            partField.classList.add('hidden');
+            driveField.classList.add('hidden');
+            kmField.classList.add('hidden');
+            engineField.classList.add('hidden');
+            transmationField.classList.add('hidden');
+            colorField.classList.add('hidden');
+
+            // Логика показа полей в зависимости от категории
+            if (category === 'car') {
+                brandField.classList.remove('hidden');
+                modelField.classList.remove('hidden');
+                yearField.classList.remove('hidden');
+                driveField.classList.remove('hidden');
+                kmField.classList.remove('hidden');
+                engineField.classList.remove('hidden');
+                transmationField.classList.remove('hidden');
+                colorField.classList.remove('hidden');
+                console.log('Поля для автомобилей отображены');
+            } else if (category === 'parts') {
+                partField.classList.remove('hidden');
+                console.log('Поля для запчастей отображены');
+            }
+        }
+
+        // Вызов загрузки данных о продукте при загрузке страницы
+        document.addEventListener('DOMContentLoaded', fetchProductDetails);
+
+
+
+    </script>
+    <script src="script.js"></script>
+    <script src="product.js"></script>
+</body>
+</html>
