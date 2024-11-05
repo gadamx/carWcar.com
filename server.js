@@ -5,7 +5,7 @@ const cors = require('cors');
 const multer = require('multer');
 const path = require('path');
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 const URL ="mongodb+srv://sales02paradise:123pass..P@cluster0.lzncc.mongodb.net/cartcom?retryWrites=true&w=majority&appName=Cluster0"
 const sharp = require('sharp');
 app.use(cors());
