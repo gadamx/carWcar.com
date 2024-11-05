@@ -22,6 +22,19 @@ app.use('/uploads', express.static('uploads')); // Для доступа к за
 
 
 
+// Укажите публичную папку для статических файлов (если требуется)
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Обработчик для корневого маршрута
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html')); // Замените на ваш HTML-файл или сообщение
+});
+
+
+
+
+
+
 // Подключение к MongoDB
 mongoose
     .connect(URL)
