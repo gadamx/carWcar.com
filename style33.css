@@ -564,8 +564,9 @@ header button:hover, header span:hover {
 }
 
 /* Мобильная адаптивность для header */
-@media (max-width: 58px) {
+@media (max-width: 99%) {
     header {
+        width: 99%;
         flex-direction: column;
         align-items: flex-start;
     }
@@ -674,12 +675,12 @@ li {
 /* style33.css */
 
 /* Адаптивный дизайн для мобильных устройств */
-@media (max-width: 768px) {
+@media (max-width: 650px) {
     header, main, footer {
-        padding: 10px;
+        padding: 1px;
         flex-direction: column;
         align-items: center;
-        width: 96%;
+        width: 99%;
         
     }
 
@@ -745,12 +746,13 @@ footer {
     #logo {
     display: flex;
     width: auto; /* Используем автоширину, чтобы не растягивался */
-    max-width: 150px; /* Максимальная ширина для логотипа */
+    max-width:10%; /* Максимальная ширина для логотипа */
     padding: 0; /* Уменьшаем padding, если он не нужен */
     margin-left: 5%;
     background-color: none;
-   margin-left: 0%;
+    margin-left: 0%;
     margin-bottom: 8px;
+   
     
 }
     #product-list div {
