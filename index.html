@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная страница</title>
+    <title>Car W Car</title>
     
     <link rel="stylesheet" href="style33.css">
     <link rel="stylesheet" href="profile.html">
@@ -14,12 +14,12 @@
         <button id="home-button" onclick="goHome()"><img id="logo" src="Logo.png" alt=""></button>
        
         <div id="quick-access">
-            <button onclick="filterByCategory('all')">Все</button>
-            <button onclick="filterByCategory('car')">Автомобили</button>
-            <button onclick="filterByCategory('parts')">Запчасти</button>
-            <button onclick="filterByCategory('service')">Сервис</button>
-            <button onclick="filterByCategory('rent')">Аренда</button>
-            <button onclick="filterByCategory('yacht')">Яхты</button>
+            <button onclick="filterByCategory('all')">All</button>
+            <button onclick="filterByCategory('car')">Car</button>
+            <button onclick="filterByCategory('parts')">Part</button>
+            <button onclick="filterByCategory('service')">Service </button>
+            <button onclick="filterByCategory('rent')">Rent</button>
+            
         
 
         
@@ -50,7 +50,7 @@
                 <button id="clear-search" type="button" class="clear-btn hidden">Clear</button>
           
             
-            <button id="searchBottom" type="submit" class="search-btn">Поиск</button>
+            <button id="searchBottom" type="submit" class="search-btn">Ok</button>
         </div>
         </form>
     </div>
@@ -66,21 +66,21 @@
    
     <div id="filters">
         <div class="filter-group" id="category-select">
-            <label for="category-select">Категория</label>
+            <label for="category-select">Category </label>
             <select id="category-select" onchange="applyFilters(); toggleFields()">
-                <option value="all">Все категории</option>
-                <option value="car">Автомобили</option>
-                <option value="parts">Запчасти</option>
-                <option value="service">Сервис</option>
-                <option value="rent">Аренда</option>
-                <option value="yacht">Яхты</option>
+                <option value="all">All</option>
+                <option value="car">Car</option>
+                <option value="parts">Part</option>
+                <option value="service">Service </option>
+                <option value="rent">Rent</option>
+                <option value="yacht">Vacation</option>
             </select>
         </div>
 
         <div class="filter-group hidden">
-            <label for="brand-select">Марка</label>
+            <label for="brand-select">Mark</label>
             <select id="brand-select" onchange="updateModels()">
-                <option value="">Все марки</option>
+                <option value="">All</option>
                 <option value="acura">Acura</option>
                 <option value="alfaromeo">Alfa Romeo</option>
                 <option value="astonmartin">Aston Martin</option>
@@ -141,16 +141,16 @@
         </div>
 
         <div class="filter-group hidden">
-            <label for="model-select">Модель</label>
+            <label for="model-select">Model</label>
             <select id="model-select">
-                <option value="">Все модели</option>
+                <option value="">All</option>
             </select>
         </div>
         <div class="filter-group hidden" id="part-filter-group">
-            <label for="part-select">Часть авто</label>
+            <label for="part-select">Part</label>
             <select id="part-select" onchange="applyFilters()">
-                <option value="all">Все части</option>
-                <option value="body">Кузов</option>
+                <option value="all">All</option>
+                <option value="body">Body</option>
                 <option value="suspension">Подвеска</option>
                 <option value="electronics">Электроника</option>
                 <option value="engine">Двигатель и трансмиссия</option>
@@ -167,16 +167,16 @@
                 <option value="rest">restaurants</option>
                 <option value="beaches">beaches</option>
                 <option value="mall">malls</option>               
-                <option value="erea's">Интересные места</option>
+                <option value="erea's">Interesting</option>
             </select>
         </div>
         
         <div class="filter-group hidden">
-            <label for="year-from">Год с</label>
+            <label for="year-from">Year</label>
             <select id="year-from">
-                <option value="">Год с</option>
+                <option value="">Year с</option>
                 <script>
-                    for (let year = 1950; year <= 2025; year++) {
+                    for (let year = 2015; year <= 2025; year++) {
                         document.write(`<option value="${year}">${year}</option>`);
                     }
                 </script>
@@ -184,11 +184,11 @@
         </div>
 
         <div class="filter-group hidden">
-            <label for="year-to">Год по</label>
+            <label for="year-to">Year </label>
             <select id="year-to">
-                <option value="">Год по</option>
+                <option value="">Year</option>
                 <script>
-                    for (let year = 1950; year <= 2025; year++) {
+                    for (let year = 2015; year <= 2025; year++) {
                         document.write(`<option value="${year}">${year}</option>`);
                     }
                 </script>
@@ -196,19 +196,19 @@
         </div>
 
         <div class="filter-group hidden" id="price-filter-group">
-            <label for="price-from">Цена от</label>
+            <label for="price-from">Price</label>
             <input type="number" id="price-from" placeholder="Цена от">
         </div>
 
         <div class="filter-group hidden">
-            <label for="price-to">Цена до</label>
+            <label for="price-to">Price</label>
             <input type="number" id="price-to" placeholder="Цена до">
         </div>
 
         <div class="filter-group hidden">
-            <label for="location-select">Местоположение</label>
+            <label for="location-select">Location </label>
             <select id="location-select">
-                <option value="">Все локации</option>
+                <option value="">All</option>
                 <option value="dubai">Dubai</option>
                 <option value="sharjah">Sharjah</option>
                 <option value="abu-dhabi">Abu Dhabi</option>
@@ -227,28 +227,28 @@
 <div id="ads">
     
     <div class="ad-circle" onclick="adClicked('Ссылка_на_рекламу_1')">
-        <img src="audir8.png" alt="Реклама 1">
-        <span>Реклама 1</span>
+        <img src="audir8.png" alt=" 1">
+        <span> 1</span>
     </div>
     <div class="ad-circle" onclick="adClicked('Ссылка_на_рекламу_2')">
-        <img src="cadillac.jpg" alt="Реклама 2">
-        <span>Реклама 2</span>
+        <img src="cadillac.jpg" alt=" 2">
+        <span> 2</span>
     </div>
     <div class="ad-circle" onclick="adClicked('Ссылка_на_рекламу_3')">
-        <img src="mers.png" alt="Реклама 3">
-        <span>Реклама 3</span>
+        <img src="mers.png" alt=" 3">
+        <span> 3</span>
     </div>
     <div class="ad-circle" onclick="adClicked('Ссылка_на_рекламу_4')">
-        <img src="lambo.png" alt="Реклама 4">
-        <span>Реклама 4</span>
+        <img src="lambo.png" alt=" 4">
+        <span> 4</span>
     </div>
     <div class="ad-circle" onclick="adClicked('Ссылка_на_рекламу_5')">
-        <img src="sl63.png" alt="Реклама 5">
-        <span>Реклама 5</span>
+        <img src="sl63.png" alt=" 5">
+        <span> 5</span>
     </div>
     <div class="ad-circle" onclick="adClicked('Ссылка_на_рекламу_6')">
-        <img src="mrs12.png" alt="Реклама 6">
-        <span>Реклама 6</span>
+        <img src="mrs12.png" alt=" 6">
+        <span> 6</span>
     </div>
 </div>
 
@@ -272,9 +272,9 @@
 
 
         <div id="pagination">
-            <button class="page" id="prev" disabled>Назад</button>
-            <span class="page" id="page-info">Страница 1 из 1</span>
-            <button class="page" id="next">Вперед</button>
+            <button class="page" id="prev" disabled>Back</button>
+            <span class="page" id="page-info">Page 1 из 1</span>
+            <button class="page" id="next">Next</button>
         </div>
     </main>
 
@@ -284,18 +284,18 @@
     <div id="popup" class="hidden">
         <button class="close-button" onclick="hidePopup()">X</button>
         <div id="auth-container">
-            <h2 id="auth-title">Авторизация</h2>
+            <h2 id="auth-title">Sing In</h2>
             
             <form id="login-form" onsubmit="handleLogin(event)">
-                <label id="loginObekct" for="login-username">Имя пользователя:</label>
+                <label id="loginObekct" for="login-username">User name:</label>
                 <input type="text" id="login-username" required>
-                <label  id="loginObekct" for="login-password">Пароль:</label>
+                <label  id="loginObekct" for="login-password">Password </label>
                 <input type="password" id="login-password" required>
-                <button type="submit">Войти</button>
+                <button type="submit">Ok</button>
                 <p>Нет аккаунта? <a href="#" onclick="toggleForms()">Зарегистрируйтесь</a></p>
             </form>
             <div id="register-form" class="hidden">
-                <h3>Выберите тип регистрации:</h3>
+                <h3>Choose:</h3>
                 <label>
                     <input type="radio" name="registration-type" value="user" checked onclick="toggleCompanyFields()"> Persanal 
                 </label>
@@ -303,10 +303,10 @@
                     <input type="radio" name="registration-type" value="company" onclick="toggleCompanyFields()"> Company
                 </label>
                 <br>
-                <label for="register-username">Имя пользователя:</label>
+                <label for="register-username">User name</label>
                 <input type="text" id="register-username" required>
                 
-                <label for="register-phone">Номер телефона:</label>
+                <label for="register-phone">Phone Number</label>
                 <input type="tel" id="register-phone" required>
 
                 <label for="register-whatsApp">WhatsApp:</label>
@@ -324,22 +324,22 @@
                 <label for="register-email">Email:</label>
                 <input type="email" id="register-email" required>
                 
-                <label for="register-address">Адрес:</label>
+                <label for="register-address">Address:</label>
                 <input type="text" id="register-address" required>
                 
-                <label for="register-password">Пароль:</label>
+                <label for="register-password">Password</label>
                 <input type="password" id="register-password" required>
                 
                 <div id="company-fields" class="hidden">
-                    <label for="register-company-name">Название компании:</label>
+                    <label for="register-company-name">Company name</label>
                     <input type="text" id="register-company-name" required>
             
-                    <label for="register-license-number">Номер лицензии:</label>
+                    <label for="register-license-number">License:</label>
                     <input type="text" id="register-license-number" required>
                 </div>
             
-                <button  type="submit" onclick="handleRegister(event)">Зарегистрироваться</button>
-                <p>Уже есть аккаунт? <a    href="#" onclick="toggleForms()">Войдите</a></p>
+                <button  type="submit" onclick="handleRegister(event)">Sing Up</button>
+                <p>Already have account? <a    href="#" onclick="toggleForms()">Ok</a></p>
             </div>
         </div>
     </div>
