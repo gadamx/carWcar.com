@@ -749,13 +749,12 @@ footer {
     #logo {
     display: flex;
     width: auto; /* Используем автоширину, чтобы не растягивался */
-    max-width:10%; /* Максимальная ширина для логотипа */
+    max-width:100%; /* Максимальная ширина для логотипа */
     padding: 0; /* Уменьшаем padding, если он не нужен */
     margin-left: 5%;
     background-color: none;
     margin-left: 1%;
-    padding: 10px 10px 15px 15px;
-    margin-bottom: -4%;
+    
    
     
 }
