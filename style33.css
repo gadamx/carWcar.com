@@ -558,6 +558,7 @@ header button:hover, header span:hover {
     border-radius: 5px;
     font-size: 16px;
     transition: background-color 0.3s;
+  
 }
 
 #login-button:hover {
@@ -737,7 +738,10 @@ footer {
    
     
 }
-
+#btnnn1 {
+    margin-left: 0.1px;
+    padding: 2px 5px ;
+}
 
 
     #logo {
@@ -747,7 +751,8 @@ footer {
     padding: 0; /* Уменьшаем padding, если он не нужен */
     margin-left: 5%;
     background-color: none;
-    margin-left: 0%;
+    margin-left: 1%;
+    padding: 10px 10px 15px 15px;
     margin-bottom: -4%;
    
     
