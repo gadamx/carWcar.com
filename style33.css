@@ -487,7 +487,7 @@ p a:hover {
 /* Стили для header */
 header {
     background-color: #eef1f5;
-    
+    width:100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
