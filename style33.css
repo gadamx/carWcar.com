@@ -615,16 +615,7 @@ label[for="company"] {
 
 
 
-#footer {
-    display: flex;
-  
-    background-color: #302929;
-    color: #ddd;
-    border-radius: 5px;
-    box-shadow: #302929;
-   
-    width: 98%;
-}
+
 ul {
     margin: 19px 70px;
 }
@@ -676,7 +667,7 @@ li {
 
 /* Адаптивный дизайн для мобильных устройств */
 @media (max-width: 550px) {
-    header, main, footer {
+    header, main {
         padding: 1px;
         flex-direction: column;
         align-items: center;
@@ -722,16 +713,15 @@ header {
 }
 
 
-footer {
-    max-width: 100%;
-    padding: 10px;
-    text-align: center;
-}
 #footer {
-    flex-direction: column;
-    padding: 10px;
-    width: 100%;
-    align-items: center;
+    display: flex;
+  
+    background-color: #302929;
+    color: #ddd;
+    border-radius: 5px;
+    box-shadow: #302929;
+   
+    width: 98%;
 }
 
 
@@ -748,10 +738,10 @@ footer {
 
     #logo {
     display: flex;
-    width: 80%; /* Используем автоширину, чтобы не растягивался */
+    width: 20px; /* Используем автоширину, чтобы не растягивался */
  
-    padding: 0; /* Уменьшаем padding, если он не нужен */
-    margin-left: 5%;
+    padding: 1px; /* Уменьшаем padding, если он не нужен */
+   
     background-color: none;
     margin-left: 1%;
     
@@ -792,7 +782,7 @@ footer {
     }
 
     #product-list img {
-        max-width: 100%;
+        width: 100%;
         height: auto;
         border-radius: 10px;
     }
