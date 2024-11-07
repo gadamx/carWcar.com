@@ -554,7 +554,7 @@ header button:hover, header span:hover {
 #login-button {
     background-color: #f1f0eb;
     color: black;
-    
+    margin-left:10px;
     border-radius: 5px;
     font-size: 16px;
     transition: background-color 0.3s;
@@ -655,12 +655,14 @@ li {
     
 }
 
-#searchBottom, #clear-search {
+#searchBottom, #clear-search, form button {
     
    height: 32px;
    margin-right: 20px;
    
 }
+
+
 
 
 .product-date {
