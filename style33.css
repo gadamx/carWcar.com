@@ -80,15 +80,7 @@ h1, h2 {
     width: 98%;
 }
 
-#logo{
-    margin-right: 50px;
-}
 
-#btnnn1 {
-    margin-left: 40%;
-    margin-right: 20%;
-    
-}
 
 
 
@@ -698,7 +690,7 @@ li {
 
  #quick-access {
     display: flex;
-    margin-left:-20%;
+    margin-left:-15%;
     
 
 }
