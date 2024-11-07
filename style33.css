@@ -748,8 +748,8 @@ footer {
 
     #logo {
     display: flex;
-    width: auto; /* Используем автоширину, чтобы не растягивался */
-    max-width:100%; /* Максимальная ширина для логотипа */
+    width: 80%; /* Используем автоширину, чтобы не растягивался */
+ 
     padding: 0; /* Уменьшаем padding, если он не нужен */
     margin-left: 5%;
     background-color: none;
