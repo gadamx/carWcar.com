@@ -62,7 +62,16 @@ h1, h2 {
 }
 
 
-
+#footer {
+    display: flex;
+  
+    background-color: #302929;
+    color: #ddd;
+    border-radius: 5px;
+    box-shadow: #302929;
+   
+    width: 98%;
+}
 
 
 
@@ -715,7 +724,8 @@ header {
 
 #footer {
     display: flex;
-  
+    width:99%;
+
     background-color: #302929;
     color: #ddd;
     border-radius: 5px;
