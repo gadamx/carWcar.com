@@ -332,8 +332,8 @@ form input:focus {
 
 form button {
     margin-left: 0.1px;
-    margin-top:-2px;
-
+  
+    margin-top: 1%;
     background-color: #007bff;
     color: white;
     border: none;
