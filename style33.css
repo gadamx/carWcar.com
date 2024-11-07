@@ -782,7 +782,7 @@ footer {
         text-align: center;
     }
 
-    button, input, select, textarea {
+   input, select, textarea {
         width: 100%;
         box-sizing: border-box;
     }
