@@ -553,9 +553,9 @@ header button:hover, header span:hover {
 #login-button {
     background-color: #f1f0eb;
     color: black;
-   
+    padding: 10px 20px;
     border-radius: 5px;
-    font-size: 9px;
+    font-size: 16px;
     transition: background-color 0.3s;
 }
 
@@ -684,13 +684,6 @@ li {
         
     }
 
-
-##quick-access {
-margin-left: 3px;
-font-size: 12px;
-padding: 1px    
-}
- 
  
 
 .ad-circle {
@@ -786,7 +779,7 @@ footer {
         text-align: center;
     }
 
-   input, select, textarea {
+    button, input, select, textarea {
         width: 100%;
         box-sizing: border-box;
     }
