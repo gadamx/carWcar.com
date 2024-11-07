@@ -561,7 +561,7 @@ header button:hover, header span:hover {
 
 /* Кнопка для входа (Login) */
 #login-button {
-    background-color: #f1f0eb;
+    
     color: black;
     margin-left:10px;
     border-radius: 5px;
