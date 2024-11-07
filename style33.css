@@ -329,6 +329,7 @@ form input:focus {
 
 
 
+
 form button {
     margin-left: 15px;
     margin-top: 2px;
@@ -512,7 +513,7 @@ header button:hover, header span:hover {
 /* Стили для быстрого доступа (категории) */
 #quick-access {
     display: flex;
-    gap: 10px;
+    
 
 }
 
@@ -536,7 +537,7 @@ header button:hover, header span:hover {
 .add-product-button {
     background-color: #f3f3f3;
     color: white;
-    padding: 10px 20px;
+    padding: 20px 20px;
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -553,7 +554,7 @@ header button:hover, header span:hover {
 #login-button {
     background-color: #f1f0eb;
     color: black;
-    padding: 10px 20px;
+    
     border-radius: 5px;
     font-size: 16px;
     transition: background-color 0.3s;
@@ -571,11 +572,7 @@ header button:hover, header span:hover {
         align-items: flex-start;
     }
 
-    #quick-access {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 10px;
-    }
+  
 
     .category-button, .add-product-button, #login-button {
         width: 100%;
@@ -675,7 +672,7 @@ li {
 /* style33.css */
 
 /* Адаптивный дизайн для мобильных устройств */
-@media (max-width: 650px) {
+@media (max-width: 550px) {
     header, main, footer {
         padding: 1px;
         flex-direction: column;
@@ -715,7 +712,7 @@ li {
 
 header {
     max-width: 100%;
-    padding: 10px;
+    padding: 2px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -735,10 +732,10 @@ footer {
 }
 
 
-#addItemm {
-    margin-left: auto;
-    margin-bottom: -7%;
-    margin-top: 7%;
+#addItems {
+    width: 200px;
+   
+    
 }
 
 
@@ -751,7 +748,7 @@ footer {
     margin-left: 5%;
     background-color: none;
     margin-left: 0%;
-    margin-bottom: 8px;
+    margin-bottom: -4%;
    
     
 }
