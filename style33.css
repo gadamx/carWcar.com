@@ -523,7 +523,7 @@ header button:hover, header span:hover {
 /* Стили для быстрого доступа (категории) */
 #quick-access {
     display: flex;
-    margin-left:-10%;
+    margin-left:-20%;
     
 
 }
