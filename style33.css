@@ -32,7 +32,9 @@ h1, h2 {
 #user-name {
     margin-right: 10px;
 }
-
+#login-button {
+    margin-left:35%;
+}
 #logo {
     display: flex;
     width: auto; /* Используем автоширину, чтобы не растягивался */
