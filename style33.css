@@ -522,6 +522,7 @@ header button:hover, header span:hover {
 /* Стили для быстрого доступа (категории) */
 #quick-access {
     display: flex;
+    margin-left:-10%;
     
 
 }
@@ -741,7 +742,7 @@ header {
 #btnnn1 {
     
     padding: 2px 5px ;
-    margin-left:1px;
+    margin-left:5px;
 }
 
 
