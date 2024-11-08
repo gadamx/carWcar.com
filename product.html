@@ -10,7 +10,7 @@
 </head>
 
 <header>
-    <button id="home-button" onclick="goHome()"><img id="logo" src="Logo.png" alt=""></button>
+    <button id="home-button" onclick="goHome()"><img id="logo" src="logo.png" alt=""></button>
    
    
 
@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         async function fetchProductDetails() {
     try {
-        const response = await fetch(`http://localhost:5000/product/${productId}`);
+        const response = await fetch(`https://cartcom.onrender.com/product/${productId}`);
         const product = await response.json();
         console.log(product);  // Добавьте это для проверки
 
