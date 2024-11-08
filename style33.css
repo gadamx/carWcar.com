@@ -570,7 +570,7 @@ header button:hover, header span:hover {
 #login-button {
     
     color: black;
-    margin-left:10px;
+    margin-left:50%;
     border-radius: 5px;
     font-size: 16px;
     transition: background-color 0.3s;
@@ -690,6 +690,20 @@ li {
         width: 99%;
         
     }
+
+
+#login-button {
+    
+    color: black;
+    margin-left:10px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  
+}
+
+
+
 
  #quick-access {
     display: flex;
