@@ -205,7 +205,7 @@ form button {
     padding: 10px  1px 20px 10px;
     border-radius:15px;
     box-shadow: 0 40px 20px rgba(0, 0, 0, 0.1);
-    width: 99%;
+    width: 97%;
 }
 
 .filter-group {
@@ -794,7 +794,7 @@ header {
     }
 
     button, input, select, textarea {
-        width: 100%;
+        width: 96%;
         box-sizing: border-box;
     }
 
@@ -810,7 +810,7 @@ header {
 
     #filters button {
         padding: 8px 16px;
-        width: 100%;
+        width: 95%;
         font-size: 14px;
     }
     
