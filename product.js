@@ -3,7 +3,7 @@ let images = []; // Массив для хранения путей изобра
 
 async function fetchProductDetails() {
     try {
-        const response = await fetch(`http://localhost:5000/product/${productId}`);
+        const response = await fetch(`https://cartcom.onrender.com/product/${productId}`);
         const product = await response.json();
 
         // Проверяем наличие изображений
@@ -16,7 +16,7 @@ async function fetchProductDetails() {
             // Отображаем изображения и скрываем все, кроме первого
             product.image.forEach((imagePath, index) => {
                 const img = document.createElement('img');
-                img.src = `http://localhost:5000/${imagePath}`;
+                img.src = `https://cartcom.onrender.com/${imagePath}`;
                 img.classList.add('product-images');
 
                 // Добавляем класс 'hidden' для всех изображений, кроме первого
@@ -106,7 +106,7 @@ async function submitComment() {
     };
 
     try {
-        const response = await fetch('http://localhost:5000/comments', {
+        const response = await fetch('https://cartcom.onrender.com/comments', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -132,7 +132,7 @@ async function loadComments() {
     const commentsList = document.getElementById('comments-list');
 
     try {
-        const response = await fetch(`http://localhost:5000/comments/${productId}`);
+        const response = await fetch(`https://cartcom.onrender.com/comments/${productId}`);
         const comments = await response.json();
 
         commentsList.innerHTML = ''; // Очищаем список комментариев
