@@ -27,7 +27,7 @@ window.onload = function() {
 // Функция для загрузки товаров с сервера
 async function fetchProducts() {
     try {
-        const response = await fetch('http://localhost:5000/products');
+        const response = await fetch('https://cartcom.onrender.com/products');
         products = await response.json(); // Сохраняем товары в переменной
         displayProducts(products); // Отображаем товары на странице
     } catch (error) {
@@ -44,7 +44,7 @@ function displayProducts(products) {
         products.forEach(product => {
             const productDiv = document.createElement('div');
             productDiv.innerHTML = `
-                <img src="http://localhost:5000/${product.image[0]}" alt="${product.name}" class="product-image" />
+                <img src="https://cartcom.onrender.com/${product.image[0]}" alt="${product.name}" class="product-image" />
                 <h2>${product.name}</h2>
                 <p>${product.price} </p>
                 <p>${product.location}</p>
@@ -511,7 +511,7 @@ async function handleLogin(event) {
     const password = document.getElementById('login-password').value;
 
     try {
-        const response = await fetch('http://localhost:5000/login', {
+        const response = await fetch('https://cartcom.onrender.com/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -590,7 +590,7 @@ async function handleRegister(event) {
     };
 
     try {
-        const response = await fetch('http://localhost:5000/register', {
+        const response = await fetch('https://cartcom.onrender.com/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
