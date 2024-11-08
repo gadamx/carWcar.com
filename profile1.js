@@ -105,7 +105,7 @@ let products = [];
 async function fetchProducts() {
     try {
         // Отправляем запрос на сервер для получения товаров по ID пользователя
-        const response = await fetch(`http://localhost:5000/products/${userId}`);
+        const response = await fetch(`https://cartcom.onrender.com/products/${userId}`);
         if (!response.ok) throw new Error(`Ошибка загрузки товаров: ${response.statusText}`); // Обрабатываем ошибку, если запрос не удался
 
         products = await response.json(); // Парсим ответ в формате JSON
@@ -120,7 +120,7 @@ async function fetchProducts() {
             // Создаем элемент изображения товара, если оно есть
             if (product.image && product.image.length > 0) {
                 const img = document.createElement('img'); // Создаем элемент <img>
-                img.src = `http://localhost:5000/${product.image[0]}`; // Указываем путь к изображению
+                img.src = `https://cartcom.onrender.com/${product.image[0]}`; // Указываем путь к изображению
                 img.alt = product.name; // Устанавливаем альтернативный текст для изображения
                 img.classList.add('product-image'); // Добавляем класс для стилизации изображения
                 li.appendChild(img); // Добавляем изображение к элементу товара
@@ -183,7 +183,7 @@ async function editProduct(productId) {
 
     try {
         // Отправляем запрос на сервер
-        const response = await fetch(`http://localhost:5000/product/${productId}`);
+        const response = await fetch(`https://cartcom.onrender.com/product/${productId}`);
         console.log('Ответ от сервера:', response); // Логируем ответ сервера
 
         // Проверяем статус ответа
@@ -337,7 +337,7 @@ async function deleteProduct(id) {
     if (confirm('Вы уверены, что хотите удалить этот товар?')) { // Подтверждаем действие у пользователя
         try {
             // Отправляем запрос на сервер для удаления товара
-            const response = await fetch(`http://localhost:5000/delete-product/${id}`, { method: 'DELETE' });
+            const response = await fetch(`https://cartcom.onrender.com/delete-product/${id}`, { method: 'DELETE' });
             if (!response.ok) throw new Error('Ошибка удаления товара: ' + response.statusText); // Обрабатываем ошибки
             alert('Товар успешно удалён!'); // Уведомляем пользователя об успешном удалении
             fetchProducts(); // Обновляем список товаров
@@ -486,7 +486,7 @@ async function saveProduct() {
     console.log('Отправляемое тело запроса:', body); // Логирование тела запроса
 
     try {
-        const response = await fetch(`http://localhost:5000/edit-product/${currentProductId}`, {
+        const response = await fetch(`https://cartcom.onrender.com/edit-product/${currentProductId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -515,7 +515,7 @@ async function editProfile() {
 
     try {
         // Запрос на сервер для получения информации о пользователе
-        const response = await fetch(`http://localhost:5000/user/${userId}`);
+        const response = await fetch(`https://cartcom.onrender.com/user/${userId}`);
         if (!response.ok) throw new Error('Ошибка получения данных профиля: ' + response.statusText);
         
         const userData = await response.json(); // Парсим данные профиля
@@ -551,7 +551,7 @@ async function saveProfile() {
 
     try {
         // Отправляем PUT-запрос для сохранения профиля
-        const response = await fetch(`http://localhost:5000/user/${userId}`, {
+        const response = await fetch(`https://cartcom.onrender.com/user/${userId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
