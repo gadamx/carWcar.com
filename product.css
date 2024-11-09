@@ -68,7 +68,7 @@ body {
     border-radius: 8px;
     text-align: center;
     font-size: 12px;
-    width: 33%; /* Расширяем блок комментариев */
+    width: 90%; /* Расширяем блок комментариев */
     box-shadow: 10px 20px 4px rgba(0, 0, 0, 0.2);
     max-height: 300px; /* Фиксируем максимальную высоту */
     overflow-y: hidden; /* Скрываем прокрутку основного контейнера */
@@ -267,7 +267,7 @@ h3 {
     
     margin: 20px;
     margin-left: 1%;
-    width: 69%;
+    width: 90%;
     height: 200px;
     background-color: #b9b7b7;
     padding: 1%;
@@ -325,13 +325,13 @@ h3 {
 }
 
 #note-coment {
-    display: flex;
+    display:inline ;
 }
 
 #comment-text {
     
     height: 50px;
-    width: 73%;
+    width: 98%;
     border-radius: 10px;
     box-shadow: 10px 20px 4px rgba(0, 0, 0, 0.2);
 }
@@ -355,7 +355,7 @@ h3 {
 }
 
 #comment-text {
-    width: 80%;
+    width: 90%;
     height: 40px;
     border-radius: 10px;
     padding: 5px;
