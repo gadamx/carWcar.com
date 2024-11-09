@@ -61,7 +61,7 @@ body {
 }
 
 #comments-section {
-    margin-top: 8px;
+    margin-top: 2px;
     grid-column: span 2;
     background-color: #fdfdfd;
     color: white;
@@ -83,7 +83,7 @@ body {
     background-color: white;
     color: black;
     border-radius: 8px;
-    padding: 10px;
+    padding: 2px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
