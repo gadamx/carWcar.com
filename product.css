@@ -68,7 +68,7 @@ body {
     border-radius: 8px;
     text-align: center;
     font-size: 12px;
-    width: 90%; /* Расширяем блок комментариев */
+    width: 98%; /* Расширяем блок комментариев */
     box-shadow: 10px 20px 4px rgba(0, 0, 0, 0.2);
     max-height: 300px; /* Фиксируем максимальную высоту */
     overflow-y: hidden; /* Скрываем прокрутку основного контейнера */
@@ -268,7 +268,7 @@ h3 {
     
     margin: 20px;
     margin-left: 1%;
-    width: 90%;
+    width: 95%;
     height: 200px;
     background-color: #b9b7b7;
     padding: 1%;
