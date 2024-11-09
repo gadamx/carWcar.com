@@ -187,7 +187,7 @@ header button:hover {
 }
 
 #product-details div {
-    width: 200px;
+    width: 170px;
     padding: 5px;
     background-color: #fff;
     border-radius: 10px;
@@ -443,8 +443,8 @@ h3 {
     }
     #infopro {
         
-        margin-left: 5%;  
-        width: 90%;
+        margin-left: 0.1%;  
+        width: 100%;
     }
     
    
