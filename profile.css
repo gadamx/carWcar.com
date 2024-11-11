@@ -9,7 +9,7 @@ body {
 header {
     background-color: #eef1f5; /* Яркий синий цвет */
     color: rgb(15, 12, 12);
-    padding: 8% /* Увеличенные отступы */
+    padding: 8%; /* Увеличенные отступы */
     display: flex;
     justify-content: space-between;
     align-items: center;
