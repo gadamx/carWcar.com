@@ -156,13 +156,13 @@ async function fetchProducts() {
 
             // Кнопка редактирования
             const editButton = document.createElement('button'); // Создаем кнопку редактирования
-            editButton.textContent = 'Редактировать'; // Устанавливаем текст кнопки
+            editButton.textContent = 'Edit'; // Устанавливаем текст кнопки
             editButton.onclick = () => editProduct(product._id); // Назначаем событие при клике
             actionsDiv.appendChild(editButton); // Добавляем кнопку в контейнер действий
 
             // Кнопка удаления
             const deleteButton = document.createElement('button'); // Создаем кнопку удаления
-            deleteButton.textContent = 'Удалить'; // Устанавливаем текст кнопки
+            deleteButton.textContent = 'Delet'; // Устанавливаем текст кнопки
             deleteButton.onclick = () => deleteProduct(product._id); // Назначаем событие при клике
             actionsDiv.appendChild(deleteButton); // Добавляем кнопку в контейнер действий
 
