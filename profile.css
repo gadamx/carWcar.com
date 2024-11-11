@@ -373,7 +373,7 @@ select:focus {
 
 
 .product-card {
-    width: 80%;
+    width: 85%;
     display:flexbox;
     justify-content: space-between;
     align-items: center;
