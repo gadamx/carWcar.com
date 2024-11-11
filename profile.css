@@ -120,6 +120,7 @@ li button:hover {
 .modal-content {
     background-color: #ffffff; 
     margin: 2% ; 
+    margin-top:20%; 
     padding: 10px; /* Увеличенные отступы */
     border-radius: 15px; 
     width: 90%; 
