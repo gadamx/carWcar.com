@@ -40,6 +40,7 @@ button:hover {
 }
 
 main {
+    width:90%;
     margin-top: 20px;
     background-color: white;
     padding: 3px; /* Увеличенные отступы */
@@ -371,15 +372,15 @@ select:focus {
 
 }
 main {
-    main {
-        width:95%
+    
+    width:95%
     margin-top: 40px;
     background-color: white;
     padding: 3px; /* Увеличенные отступы */
     border-radius: 15px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
-}
+
 
 .product-card {
     width: 85%;
