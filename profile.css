@@ -383,6 +383,7 @@ select:focus {
     padding: 20px;
     margin-bottom: 15px;
     transition: transform 0.1s ease, box-shadow 0.1s ease;
+    border-color:black;
 }
 
 .product-description {
