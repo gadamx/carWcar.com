@@ -9,20 +9,20 @@
 <body>
   <header>
     <button id="home-button" onclick="goHome()"><img id="logo" src="logo.png" alt=""></button>
-    <button onclick="goToAddProduct()">Добавить товар</button>
-    <span id="user-name" class="hidden">Имя пользователя</span> <!-- Элемент для отображения имени пользователя -->
+    <button onclick="goToAddProduct()">Add Item</button>
+    <span id="user-name" class="hidden">Name</span> <!-- Элемент для отображения имени пользователя -->
     <div id="popup-menu" class="hidden">
-        <button id="edit-button" onclick="editProfile()">Редактировать</button>
-        <button id="logout-button" onclick="logout()">Выйти</button>
+        <button id="edit-button" onclick="editProfile()">Edit</button>
+        <button id="logout-button" onclick="logout()">Log out</button>
     </div>
 </header>
 
 
     <main>
         <h2 id="welcome-message"></h2>
-        <button onclick="goToAddProduct()">Добавить товар</button>
+        
 
-        <h3>Список ваших товаров:</h3>
+        <h3>Your Items:</h3>
         <ul id="product-list"></ul> <!-- Список товаров -->
     </main>
 
@@ -32,25 +32,25 @@
             <span class="close" onclick="closeEditModal()">&times;</span> <!-- Кнопка закрытия модального окна -->
             <h3>Редактировать товар</h3>
 
-            <label for="product-name">Название товара:</label>
+            <label for="product-name">Name:</label>
             <input type="text" id="product-name"  />
 
-            <label for="product-category">Категория товара:</label>
+            <label for="product-category">Category</label>
             <select id="product-category"  onchange="updateBrands()">
               
-                <option value="car">Автомобиль</option>
-                <option value="parts">Запчасти</option>
-                <option value="service">Сервис</option>
-                <option value="rent">Аренда</option>
-                <option value="yacht">Яхта</option>
+                <option value="car">Cars</option>
+                <option value="parts">Parts</option>
+                <option value="service">Service </option>
+                <option value="rent">Rent</option>
+                <option value="yacht">Vacation </option>
             </select>
 
 
 
             <div id="product-brand-group" class="field brand">
-            <label for="product-brand">Марка автомобиля:</label>
+            <label for="product-brand">Mark:</label>
             <select id="product-brand"  onchange="updateModels()">
-                <option value="">Выберите марку</option>
+                <option value="">Choose mark</option>
                 <option value="audi">Audi</option>
                 
                 
@@ -113,13 +113,13 @@
           </div>
 
           <div id="product-model-group" class="field model ">
-            <label for="product-model">Модель автомобиля:</label>
+            <label for="product-model">Model:</label>
             <select id="product-model">
-                <option value="">Выберите модель</option>
+                <option value="">Choose Model</option>
             </select>
         </div>
         <div id="product-year-start-group" class="field start">
-            <label for="product-year-start" >Год:</label>
+            <label for="product-year-start" >Year</label>
             <input type="text" id="product-year-start"  />
 
         </div>
@@ -236,10 +236,10 @@
 </div>
 
           <div id="imgedit" >
-            <label for="product-images">Загрузить фотографии:</label>
+            <label for="product-images">Uploud Image </label>
             <input type="file" id="product-images" name="images" accept="image/*" multiple  />
           </div>
-            <label for="product-description">Описание товара:</label>
+            <label for="product-description">Product Description:</label>
             <input type="text" id="product-description"  />
 
            
@@ -250,16 +250,16 @@
 
             
             <div id="part-select-group" class="field part">
-            <label for="part-select">Часть автомобиля</label>
+            <label for="part-select">Part </label>
             <select id="part-select" onchange="applyFilters()">
-                <option value="all">Все части</option>
-                <option value="body">Кузов</option>
-                <option value="suspension">Подвеска</option>
-                <option value="electronics">Электроника</option>
-                <option value="engine">Двигатель и трансмиссия</option>
-                <option value="wheel">Колесо</option>
-                <option value="interior">Салон</option>
-                <option value="cooling">Система охлаждения</option>
+                <option value="all">All</option>
+                <option value="body">Body </option>
+                <option value="suspension">Suspension</option>
+                <option value="electronics">Electronics</option>
+                <option value="engine">Engine and transmission </option>
+                <option value="wheel">Wheel</option>
+                <option value="interior">Salo</option>
+                <option value="cooling">Cooling system</option>
             </select>
 
                    </div>
@@ -270,7 +270,7 @@
                     <option value="rest">restaurants</option>
                     <option value="beaches">beaches</option>
                     <option value="mall">malls</option>               
-                    <option value="erea's">Интересные места</option>
+                    <option value="erea's">More place </option>
                 </select> 
               </div>
 
@@ -287,7 +287,7 @@
 
            
 
-            <button onclick="saveProduct()">Сохранить</button> <!-- Кнопка для сохранения изменений -->
+            <button onclick="saveProduct()">Save</button> <!-- Кнопка для сохранения изменений -->
         </div>
     </div>
     
@@ -301,11 +301,11 @@
 <div id="edit-profile-modal" class="modal hidden">
   <div class="modal-content">
       <span class="close" onclick="closeProfileModal()">&times;</span> <!-- Кнопка закрытия -->
-      <h2>Редактирование профиля</h2>
-      <label for="profile-username">Имя пользователя:</label>
+      <h2>Edit</h2>
+      <label for="profile-username">Name</label>
       <input type="text" id="profile-username" />
       
-      <label for="profile-phone">Номер телефона:</label>
+      <label for="profile-phone">Phone</label>
       <input type="text" id="profile-phone" />
 
       <label for="profile-whatsApp">whatsApp:</label>
@@ -325,7 +325,7 @@
 
      
 
-      <button onclick="saveProfile()">Сохранить</button>
+      <button onclick="saveProfile()">Save</button>
   </div>
 </div>
 
