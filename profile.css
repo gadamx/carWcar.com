@@ -370,7 +370,14 @@ select:focus {
     margin-right:17%
 
 }
-
+main {
+    max-width: 90%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
 
 .product-card {
     width: 85%;
