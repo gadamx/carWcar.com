@@ -26,10 +26,11 @@ button {
     
     color: rgb(10, 7, 7);
     border: none;
-    padding: 12px 25px; /* Увеличенные отступы */
+    padding: 1px 1px; /* Увеличенные отступы */
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: none;
     transition: background-color 0.3s, transform 0.2s;
+    margin-right: 60px;
 }
 
 button:hover {
@@ -361,6 +362,7 @@ select:focus {
     header {
         padding: 10px;
         flex-direction: column;
+        display:contents;
     }
 
     .modal-content {
@@ -385,10 +387,12 @@ select:focus {
 #logo {
     display: flex;
     width: auto; /* Используем автоширину, чтобы не растягивался */
-    max-width: 150px; /* Максимальная ширина для логотипа */
+    max-width: 65px; /* Максимальная ширина для логотипа */
     padding: 0; /* Уменьшаем padding, если он не нужен */
     margin-left: 5%;
+    
     background-color: none;
     margin: 1px;
+    
     
 }
