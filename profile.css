@@ -122,8 +122,8 @@ li button:hover {
     margin: 2% ; 
     padding: 10px; /* Увеличенные отступы */
     border-radius: 15px; 
-    width: 70%; 
-    max-width: 60%; /* Увеличенная ширина */
+    width: 90%; 
+    max-width: 90%; /* Увеличенная ширина */
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3); 
   
 }
