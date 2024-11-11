@@ -385,7 +385,17 @@ select:focus {
     transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
-
+.product-description {
+    width: 100%; /* Ширина 100% от родительского элемента */
+    height: 100px; /* Высота поля */
+    padding: 5px; /* Внутренние отступы */
+    border-color: white;
+    border-radius: 5px; /* Скругленные углы */
+    border: 1px solid #ced4da; /* Цвет и ширина рамки */
+    font-size: 14px; /* Размер шрифта */
+    resize: vertical; /* Ограничение на изменение размера по вертикали */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
+}
 
 
     
