@@ -810,7 +810,7 @@ header {
     button, input, select, textarea {
         width: 89%;
         box-sizing: border-box;
-        margin-left:10%
+        margin-left:1%
     }
 
     #pagination {
