@@ -94,7 +94,7 @@ const username = params.get('username'); // Получаем имя пользо
 const userId = params.get('userId'); // Получаем ID пользователя из URL
 
 // Отображаем приветственное сообщение
-document.getElementById('welcome-message').textContent = `Добро пожаловать в личный кабинет, ${username}!`;
+document.getElementById('welcome-message').textContent = `Welcome , ${username}!`;
 // Загружаем товары при загрузке страницы
 fetchProducts();
 
