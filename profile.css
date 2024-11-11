@@ -366,8 +366,8 @@ select:focus {
         display:contents;
     }
 #Add_Item {
-    margin-left:30%;
-    margin-right:20px;
+    margin-left:20%;
+    margin-right:20%
 
 }
     .modal-content {
