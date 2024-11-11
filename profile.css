@@ -394,6 +394,7 @@ main {
     margin-bottom: 15px;
     transition: transform 0.1s ease, box-shadow 0.1s ease;
     border-color:black;
+    margin-left: 3%;
 }
 
 .product-description {
