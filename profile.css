@@ -221,7 +221,7 @@ select:focus {
     display:flexbox;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff;
+    background-color: #e0e0e0;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
