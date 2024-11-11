@@ -106,7 +106,7 @@ li button:hover {
 
 .modal {
    
-    position: absolute;
+    position: fixed;
     z-index: 1; 
     left: 0;
     top: 0;
@@ -318,7 +318,7 @@ select:focus {
     cursor: pointer;
    
     transition: background-color 0.3s, transform 0.2s;
-    position:absolute;
+    position:fixed;
     background-color: white;
     border: 1px solid #ccc;
     padding: 10px;
