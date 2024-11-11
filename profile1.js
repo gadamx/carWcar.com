@@ -162,7 +162,7 @@ async function fetchProducts() {
 
             // Кнопка удаления
             const deleteButton = document.createElement('button'); // Создаем кнопку удаления
-            deleteButton.textContent = 'Delet'; // Устанавливаем текст кнопки
+            deleteButton.textContent = 'Delete'; // Устанавливаем текст кнопки
             deleteButton.onclick = () => deleteProduct(product._id); // Назначаем событие при клике
             actionsDiv.appendChild(deleteButton); // Добавляем кнопку в контейнер действий
 
