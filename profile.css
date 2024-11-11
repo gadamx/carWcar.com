@@ -395,6 +395,11 @@ button {
     margin-left: 1px;
 }
 
+#Add_Item {
+    margin-left:30%;
+    margin-right:30%
+
+
 #logo {
     display: flex;
     width: auto; /* Используем автоширину, чтобы не растягивался */
