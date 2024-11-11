@@ -432,7 +432,7 @@ button {
     
     color: rgb(10, 7, 7);
     border: none;
-    padding: 10px 1px; /* Увеличенные отступы */
+    padding: 10px 800px; /* Увеличенные отступы */
     cursor: pointer;
     border-radius: none;
     transition: background-color 0.3s, transform 0.2s;
