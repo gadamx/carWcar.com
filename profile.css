@@ -370,6 +370,25 @@ select:focus {
     margin-right:17%
 
 }
+
+
+.product-card {
+    width: 90%;
+    display:flexbox;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+
+
+
+    
     .modal-content {
         width: 90%;
         padding: 15px;
