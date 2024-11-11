@@ -365,7 +365,11 @@ select:focus {
         flex-direction: column;
         display:contents;
     }
+#Add_Item {
+    margin-left:30%;
+    margin-right:30%
 
+}
     .modal-content {
         width: 90%;
         padding: 15px;
@@ -395,9 +399,7 @@ button {
     margin-left: 1px;
 }
 
-#Add_Item {
-    margin-left:30%;
-    margin-right:30%
+
 
 
 #logo {
