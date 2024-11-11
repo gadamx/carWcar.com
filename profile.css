@@ -445,7 +445,7 @@ button {
     max-width: 65px; /* Максимальная ширина для логотипа */
     padding: 0; /* Уменьшаем padding, если он не нужен */
     margin-left: 15%;
-    
+    margin-bottom:10%;
     background-color: none;
     margin-left: 25%;
     
