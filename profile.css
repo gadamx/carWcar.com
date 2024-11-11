@@ -383,14 +383,24 @@ select:focus {
         font-size: 14px;
     }
 }
-
+button {
+    
+    color: rgb(10, 7, 7);
+    border: none;
+    padding: 1px 1px; /* Увеличенные отступы */
+    cursor: pointer;
+    border-radius: none;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-right: 30px;
+    margin-left: 5%;
+}
 
 #logo {
     display: flex;
     width: auto; /* Используем автоширину, чтобы не растягивался */
     max-width: 65px; /* Максимальная ширина для логотипа */
     padding: 0; /* Уменьшаем padding, если он не нужен */
-    margin-left: 5%;
+    margin-left: 15%;
     
     background-color: none;
     margin-left: 25%;
