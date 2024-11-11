@@ -27,10 +27,12 @@ h1, h2 {
     color: #333;
     margin-left: 40%;
     
+    
 }
 
 #user-name {
-    margin-right: 10px;
+    margin-left: 250px;
+    margin-top:31px;
 }
 #login-button {
     margin-left:35%;
