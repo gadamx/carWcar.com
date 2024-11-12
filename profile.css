@@ -314,6 +314,8 @@ select:focus {
     background-color: #010509;
     padding: 5px 30px;
     border-radius: 10px;
+    right:0;
+    position: absolute;
 }
 /* CSS */
 #popup-menu {
