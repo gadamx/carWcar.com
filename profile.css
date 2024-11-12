@@ -445,8 +445,8 @@ button {
     cursor: pointer;
     border-radius: 10px;
     transition: transform 0.2s;
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-right: 2px;
+    margin-left: 2px;
 }
 
 
