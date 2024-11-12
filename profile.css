@@ -130,6 +130,21 @@ li button:hover {
     width: 90%; 
     max-width: 90%; /* Увеличенная ширина */
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3); 
+     position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 400px;
+    max-height: 80vh; /* Максимальная высота - 80% высоты экрана */
+    overflow-y: auto; /* Вертикальная прокрутка при необходимости */
+    margin-top: 60px;
+    height: auto;
+    animation: fadeIn 0.3s;
   
 }
 
