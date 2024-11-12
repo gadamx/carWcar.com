@@ -142,7 +142,7 @@ li button:hover {
     width: 400px;
     max-height: 80vh; /* Максимальная высота - 80% высоты экрана */
     overflow-y: auto; /* Вертикальная прокрутка при необходимости */
-    margin-top: 60px;
+    margin-top: 16%;
     height: auto;
     animation: fadeIn 0.3s;
   
@@ -476,16 +476,32 @@ main {
     
 }
 
-    
-    .modal-content {
-        width: 90%;
-        padding: 15px;
-
-    overflow-y: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    }
+.modal-content {
+    background-color: #ffffff; 
+    margin: 2% ; 
+    margin-top:20%; 
+    padding: 10px; /* Увеличенные отступы */
+    border-radius: 15px; 
+    width: 90%; 
+    max-width: 90%; /* Увеличенная ширина */
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3); 
+     position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 80%;
+    max-height: 80vh; /* Максимальная высота - 80% высоты экрана */
+    overflow-y: auto; /* Вертикальная прокрутка при необходимости */
+    margin-top: 16%;
+    height: auto;
+    animation: fadeIn 0.3s;
+  
+}
 
     ul#product-list li {
         flex-direction: column;
