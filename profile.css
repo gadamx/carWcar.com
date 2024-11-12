@@ -194,7 +194,7 @@ select:focus {
 
 #product-name, #product-price, #product-location, #product-note, #seller-name, #seller-phone, #product-year-start {
     margin: 5px 0 20px 30px;
-    text-align: center;
+    text-align: left;
    max-width: 77%;
 }
 
