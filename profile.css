@@ -443,10 +443,10 @@ button {
     border: none;
     padding: 10px 1px; /* Увеличенные отступы */
     cursor: pointer;
-    border-radius: none;
+    border-radius: 10px;
     transition: transform 0.2s;
-    margin-right: 1px;
-    margin-left: 1px;
+    margin-right: 60px;
+    margin-left: 60px;
 }
 
 
