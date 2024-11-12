@@ -118,11 +118,39 @@
                 <option value="">Choose Model</option>
             </select>
         </div>
-        <div id="product-year-start-group" class="field start">
-            <label for="product-year-start" >Year</label>
-            <input type="text" id="product-year-start"  />
 
-        </div>
+
+            
+    
+
+
+            <div id="product-year-start-group" class="field start">
+         <label for="product-year-start">Year:</label>
+         <select id="product-year-start">
+         <option value="">Choose Year</option>
+         </select>
+         </div>
+
+          <script>
+           const select = document.getElementById("product-year-start");
+           for (let year = 1990; year <= 2025; year++) {
+           const option = document.createElement("option");
+            option.value = year;
+           option.textContent = year;
+              select.appendChild(option);
+                       }
+           </script>
+
+
+
+
+
+
+
+
+
+
+            
             <div id="product-color-group"  class="field color">
                 <label for="product-color">Color:</label>
                 <select  name="product-color" id="product-color" >
