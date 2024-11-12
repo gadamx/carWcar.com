@@ -417,7 +417,18 @@ main {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
     margin-left:-5%;
 }
-
+#logo {
+    display: flex;
+    width: auto; /* Используем автоширину, чтобы не растягивался */
+    max-width: 65px; /* Максимальная ширина для логотипа */
+    padding: 0; /* Уменьшаем padding, если он не нужен */
+    
+    margin-bottom:0.1%;
+   
+    margin-left: 0.1%;
+    
+    
+}
 
     
     .modal-content {
