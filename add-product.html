@@ -128,16 +128,22 @@
           </div>
 
            
-           <div id="product-year-start-group">
-           <label for="product-year-start">Year:</label>
-           <select id="product-year-start">
-            <!-- Опции для каждого года -->
-             <option value="">Choose Year</option>
-            {% for year in range(1950, 2026) %}
-            <option value="{{ year }}">{{ year }}</option>
-            {% endfor %}
-            </select>
-           </div>
+         <div id="product-year-start-group">
+         <label for="product-year-start">Year:</label>
+         <select id="product-year-start">
+         <option value="">Choose Year</option>
+         </select>
+         </div>
+
+          <script>
+           const select = document.getElementById("product-year-start");
+           for (let year = 1990; year <= 2025; year++) {
+           const option = document.createElement("option");
+            option.value = year;
+           option.textContent = year;
+              select.appendChild(option);
+                       }
+           </script>>
 
             
             <div id="product-price-group">
