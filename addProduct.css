@@ -74,6 +74,7 @@ textarea {
     margin-bottom: 15px;
     transition: border 0.3s;
     width: 99%;
+    font-size: large;
 }
 
 input[type="text"]:focus,
