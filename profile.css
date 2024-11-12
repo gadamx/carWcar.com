@@ -393,6 +393,14 @@ select:focus {
     text-align: left;
    max-width: 76%;
 }
+
+#product-name, #product-price {
+    width:77%
+}
+
+
+
+
     
 #product-year-start, #product-location {
  margin: 5px 0 20px 30px;
