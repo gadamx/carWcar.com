@@ -166,7 +166,8 @@ select {
     margin-bottom: 15px; 
     border: 1px solid #ced4da; 
     border-radius: 5px; 
-    transition: border-color 0.3s; 
+    transition: border-color 0.3s;
+    font-size:large;
 }
 
 input[type="text"]:focus,
