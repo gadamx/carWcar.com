@@ -406,7 +406,7 @@ main {
 }
 
 .product-description {
-    width: 370px; /* Ширина 100% от родительского элемента */
+    width: 270px; /* Ширина 100% от родительского элемента */
     height: 100px; /* Высота поля */
     padding: 5px; /* Внутренние отступы */
     border-color: white;
