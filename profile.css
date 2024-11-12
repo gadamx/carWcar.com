@@ -498,7 +498,7 @@ main {
     width: 75%;
     max-height: 90vh; /* Максимальная высота - 80% высоты экрана */
     overflow-y: auto; /* Вертикальная прокрутка при необходимости */
-    margin-top: 15%;
+    margin-top: 30%;
     height: auto;
     animation: fadeIn 0.3s;
   
