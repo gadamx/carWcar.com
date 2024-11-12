@@ -426,6 +426,7 @@ main {
         align-items: flex-start;
         padding: 15px;
         font-size: 14px;
+        margin-left:4%;
     }
 }
 button {
