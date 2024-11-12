@@ -162,7 +162,7 @@ input[type="number"],
 select {
     margin-left: 30px;
     width: 80%; 
-    padding: 12px; /* Увеличенные отступы */
+    padding: 10px; /* Увеличенные отступы */
     margin-bottom: 15px; 
     border: 1px solid #ced4da; 
     border-radius: 5px; 
@@ -195,7 +195,7 @@ select:focus {
 #product-name, #product-price, #product-location, #product-note, #seller-name, #seller-phone, #product-year-start {
     margin: 5px 0 20px 30px;
     text-align: left;
-   max-width: 77%;
+   max-width: 75%;
 }
 
 #imgedit {
