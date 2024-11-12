@@ -15,29 +15,27 @@
     </header>
     
     <main>
-        <h1>Добавить товар</h1>
+        <h1>Add Item</h1>
         <form id="add-product-form" enctype="multipart/form-data" onsubmit="handleAddProduct(event)">
-            <label for="product-name">Название товара:</label>
+            <label for="product-name">Name:</label>
             <input type="text" id="product-name" required>
             
-            <label for="product-category">Категория товара:</label>
+            <label for="product-category">Category:</label>
             <select id="product-category" required onchange="updateBrands()">
                 <option value="all">All</option>
-                <option value="car">Автомобиль</option>
-                <option value="parts">Запчасти</option>
-                <option value="service">Сервис</option>
-                <option value="rent">Аренда</option>
-                <option value="yacht">Яхта</option>
+                <option value="car">Cars</option>
+                <option value="parts">Part</option>
+                <option value="service">Service</option>
+                <option value="rent">Rent</option>
+                <option value="yacht">Vacation </option>
             </select>
 
             <div id="product-brand-pgroup">
-            <label for="product-brand">Марка автомобиля:</label>
+            <label for="product-brand">Mark</label>
             <select id="product-brand"  onchange="updateModels()">
-                <option value="">Выберите марку</option>
+                <option value="">Choose Mark</option>
                 <option value="audi">Audi</option>
                 <option value="bmw">BMW</option>
-              
-                <option value="">Все марки</option>
                 <option value="acura">Acura</option>
                 <option value="alfaromeo">Alfa Romeo</option>
                 <option value="astonmartin">Aston Martin</option>
@@ -97,24 +95,24 @@
             </div>
 
             <div id="product-model-group">
-            <label for="product-model">Модель автомобиля:</label>
+            <label for="product-model">Model</label>
             <select id="product-model" >
-                <option value="">Выберите модель</option>
+                <option value="">Choose Model</option>
             </select>
             </div>
 
             <div id="product-select-group">
 
-            <label for="part-select">Часть автомобиля</label>
+            <label for="part-select">Part</label>
             <select id="part-select" onchange="applyFilters()">
-                <option value="all">Все части</option>
-                <option value="body">Кузов</option>
-                <option value="suspension">Подвеска</option>
-                <option value="electronics">Электроника</option>
-                <option value="engine">Двигатель и трансмиссия</option>
-                <option value="wheel">Колесо</option>
-                <option value="interior">Салон</option>
-                <option value="cooling">Система охлаждения</option>
+                <option value="all">All</option>
+                <option value="body">Body</option>
+                <option value="suspension">Car suspension</option>
+                <option value="electronics">Electronics</option>
+                <option value="engine">Engine and transmission</option>
+                <option value="wheel">Wheel</option>
+                <option value="interior">Salon</option>
+                <option value="cooling">Cooling system</option>
             </select>
             </div>
  
@@ -125,7 +123,7 @@
                 <option value="rest">restaurants</option>
                 <option value="beaches">beaches</option>
                 <option value="mall">malls</option>               
-                <option value="erea's">Интересные места</option>
+                <option value="erea's">Other</option>
             </select> 
           </div>
 
@@ -135,12 +133,12 @@
             </div>
  
             <div id="product-price-group">
-            <label for="product-price">Цена товара:</label>
+            <label for="product-price">Price:</label>
             <input type="number" id="product-price" >
            </div>
 
 
-            <label for="product-location">Адрес:</label>
+            <label for="product-location">Address:</label>
             <select id="product-location" >
                 <option value="Dubai">Dubai</option>
                 <option value="Sharjah">Sharjah</option>
@@ -197,7 +195,7 @@
                </div>
 
                <div id="product-km-group" >
-              <label for="product-km">Km:</label>
+              <label for="product-km">KM:</label>
               <select name="product-km" id="product-km" >
                 <option value="allkm">All</option>
                 <option value="01">0 - 10 000</option>
@@ -250,20 +248,20 @@
 
 
 
-              <label for="product-images">Загрузить фотографии:</label>
+              <label for="product-images">Upload photos:</label>
               <input type="file" id="product-images" accept="image/*" multiple required>
 
 
 
 
-              <label for="product-description">Описание товара:</label>
+              <label for="product-description">description:</label>
               <textarea id="product-description" rows="4" required></textarea>
 
 
 
 
 
-            <button type="submit">Добавить товар</button>
+            <button type="submit">Add Item</button>
         </form>
     </main>
 <script src="hideinput.js"></script>
@@ -272,7 +270,7 @@
         function updateModels() {
             const brand = document.getElementById('product-brand').value;
             const modelSelect = document.getElementById('product-model');
-            modelSelect.innerHTML = '<option value="">Выберите модель</option>'; // Очистить предыдущие модели
+            modelSelect.innerHTML = '<option value="">Choose model</option>'; // Очистить предыдущие модели
 
             const models = {
                 audi: ['A1', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'Q2', 'Q3', 'Q5', 'Q7', 'Q8', 'TT', 'R8', 'e-tron GT', 'RS3', 'RS4', 'RS5', 'RS6', 'RS7', 'RS Q3', 'RS Q8', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8'],
