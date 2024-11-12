@@ -450,7 +450,10 @@ button {
     margin-left: 2px;
 }
 
-
+#edit_save {
+    margin-left:60px;
+    margin-right:60px;
+}
 
 
 #logo {
