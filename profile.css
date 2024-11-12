@@ -195,7 +195,7 @@ select:focus {
 #product-name, #product-price, #product-location, #product-note, #seller-name, #seller-phone, #product-year-start {
     margin: 5px 0 20px 30px;
     text-align: left;
-   max-width: 76%;
+   max-width: 80%;
 }
 
 #imgedit {
@@ -385,6 +385,17 @@ select:focus {
     
 
 }
+
+
+#product-name, #product-price, #product-location, #product-note, #seller-name, #seller-phone, #product-year-start {
+    margin: 5px 0 20px 30px;
+    text-align: left;
+   max-width: 76%;
+}
+
+
+
+    
 main {
     
     width:95%
