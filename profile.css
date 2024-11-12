@@ -415,6 +415,7 @@ main {
     font-size: 14px; /* Размер шрифта */
     resize: vertical; /* Ограничение на изменение размера по вертикали */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
+    margin-left:-5%;
 }
 
 
