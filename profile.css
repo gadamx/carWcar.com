@@ -477,10 +477,10 @@ button {
     width: auto; /* Используем автоширину, чтобы не растягивался */
     max-width: 65px; /* Максимальная ширина для логотипа */
     padding: 0; /* Уменьшаем padding, если он не нужен */
-    margin-left: 15%;
-    margin-bottom:10%;
+    margin-left: 0.1%;
+    margin-bottom:0.1%;
    
-    margin-left: 25%;
+    margin-left: 0.1%;
     
     
 }
