@@ -444,7 +444,7 @@ button {
     padding: 10px 1px; /* Увеличенные отступы */
     cursor: pointer;
     border-radius: none;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: transform 0.2s;
     margin-right: 1px;
     margin-left: 1px;
 }
@@ -459,7 +459,7 @@ button {
     padding: 0; /* Уменьшаем padding, если он не нужен */
     margin-left: 15%;
     margin-bottom:10%;
-    background-color: none;
+   
     margin-left: 25%;
     
     
