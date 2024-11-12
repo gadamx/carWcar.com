@@ -886,3 +886,54 @@ header {
 
 }
 
+
+
+
+/* Основной стиль для header дополнение */
+header {
+    background-color: #eef1f5;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 2px solid #e7eaf1;
+}
+
+header #logo {
+    max-width: 150px;
+    margin-right: auto;
+}
+
+/* Стили для кнопок в header */
+header button, header span {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #0c0909;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 20px;
+}
+
+header button:hover, header span:hover {
+    background-color: #eceef1;
+    border-radius: 5px;
+}
+
+/* Медиа-запрос для экранов менее 768px */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Изменение на колонку при малой ширине экрана */
+        align-items: center;
+    }
+
+    header #logo {
+        margin: 0 auto 10px auto; /* Центрирование логотипа */
+    }
+
+    header button, header span {
+        margin-left: 0; /* Убрать отступы для кнопок */
+    }
+}
