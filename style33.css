@@ -414,9 +414,10 @@ p a:hover {
 #register-form button {
     margin-top: 15px;
     background-color: #80b6f0; /* Цвет кнопки регистрации */
-    margin-left: 70px;
+    margin-left: 5%;
     padding: 15px 65px;
     border-radius: 20px;
+    width:90%
     
 }
 
