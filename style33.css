@@ -34,6 +34,8 @@ h1, h2 {
     margin-left:200px;
     margin-top:35px;
 }
+
+
 #login-button {
     margin-left:35%;
 }
@@ -42,8 +44,10 @@ h1, h2 {
 
 #sing_In {
     margin-top:2%;
-    width:75%;
+    width:74%;
 }
+
+
 #logo {
     display: flex;
     width: auto; /* Используем автоширину, чтобы не растягивался */
