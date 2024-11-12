@@ -37,6 +37,12 @@ h1, h2 {
 #login-button {
     margin-left:35%;
 }
+
+
+
+#sing_In {
+    margin-top:2%;
+
 #logo {
     display: flex;
     width: auto; /* Используем автоширину, чтобы не растягивался */
