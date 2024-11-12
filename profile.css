@@ -393,11 +393,12 @@ select:focus {
         display:contents;
     }
 #Add_Item {
-    right:2%;
+    right:5%;
     color: #faf8f8;
     background-color: #010509;
     padding: 5px 30px;
     border-radius: 10px;
+    position: absolute; 
     
 
 }
