@@ -371,7 +371,7 @@ select:focus {
         display:contents;
     }
 #Add_Item {
-    margin-left:1%;
+    margin-left:22%;
     color: #faf8f8;
     background-color: #010509;
     padding: 5px 30px;
@@ -445,8 +445,8 @@ button {
     cursor: pointer;
     border-radius: 10px;
     transition: transform 0.2s;
-    margin-right: 60px;
-    margin-left: 60px;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 
