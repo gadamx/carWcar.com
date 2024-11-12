@@ -215,7 +215,7 @@ form button {
     flex-wrap: wrap; /* Позволяет перенос элементов на новую строку */
     background-color: #ffffff;
     
-    padding: 10px  1px 20px 10px;
+    padding: 10px  1px 20px 1px;
     border-radius:15px;
     box-shadow: 0 40px 20px rgba(0, 0, 0, 0.1);
     width: 97%;
