@@ -487,7 +487,7 @@ main {
     max-width: 90%; /* Увеличенная ширина */
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3); 
      position: fixed;
-    top: 44%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: white;
@@ -496,7 +496,7 @@ main {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     width: 75%;
-    max-height: 90vh; /* Максимальная высота - 80% высоты экрана */
+    max-height: 50vh; /* Максимальная высота - 80% высоты экрана */
     overflow-y: auto; /* Вертикальная прокрутка при необходимости */
     margin-top: 30%;
     height: auto;
