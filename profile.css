@@ -328,7 +328,7 @@ select:focus {
 
 #user-name {
     color: #faf8f8;
-    background-color: #0075ea;
+    background-color: #1b99f5;
     padding: 5px 30px;
     border-radius: 10px;
     right:2%;
@@ -337,7 +337,7 @@ select:focus {
 }
 /* CSS */
 #popup-menu {
-    background-color: #091a25; /* Красный цвет кнопок */
+    background-color: #1b99f5; /* Красный цвет кнопок */
    
     cursor: pointer;
    
@@ -357,14 +357,14 @@ select:focus {
     width: 100%;
     padding: 8px;
     margin-bottom: 5px;
-    background-color: #0075ea;
+    background-color: #1b99f5;
     color: white;
     border: none;
     cursor: pointer;
 }
 
 #popup-menu button:hover {
-    background-color: #0075ea;
+    background-color: #1b99f5;
     transform: translateY(-2px);
 }
 
@@ -377,9 +377,9 @@ select:focus {
 
 #Add_Item {
     right:6%;
-    color: #faf8f8;
-    background-color: #010509;
-    padding: 5px 30px;
+    color: black;
+    background-color: #1b99f5;
+    padding: 10px 30px;
     border-radius: 10px;
     position: absolute; 
 
