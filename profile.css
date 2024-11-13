@@ -487,7 +487,7 @@ main {
     max-width: 90%; /* Увеличенная ширина */
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3); 
      position: fixed;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: white;
