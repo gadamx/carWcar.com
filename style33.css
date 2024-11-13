@@ -598,7 +598,7 @@ header button:hover, header span:hover {
 }
 
 /* Мобильная адаптивность для header */
-@media (max-width: 99%) {
+@media (max-width: 550px) {
     header {
         width: 99%;
         flex-direction: column;
