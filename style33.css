@@ -58,13 +58,15 @@ h1, h2 {
 }
 .quick-access {
     display: flex;
-    margin-left: 10px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 #btnnn1 {
     
     
-   margin-left: 35%;
+   margin-left: 0,1%;
     
 }
 
