@@ -895,7 +895,10 @@ header {
 
 
 
-.head {
-width:90%
-
+@media (max-width: 1900px) {
+    .head {
+        width: 99%;
+    }
 }
+
+
