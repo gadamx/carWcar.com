@@ -693,7 +693,7 @@ li {
     margin-top: 10px;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 2500px) {
     header, main {
         padding: 1px;
         flex-direction: column;
