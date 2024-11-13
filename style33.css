@@ -893,11 +893,14 @@ header {
 header {
     background-color: #eef1f5;
     width: 100%;
+    max-width: 1200px; /* Ограничиваем ширину для крупных экранов */
+    margin: 0 auto; /* Центрирование header на больших экранах */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     border-bottom: 2px solid #e7eaf1;
+    box-sizing: border-box; /* Включаем padding в ширину */
 }
 
 header #logo {
@@ -915,6 +918,7 @@ header button, header span {
     cursor: pointer;
     transition: background-color 0.3s;
     margin-left: 20px;
+    padding: 8px 12px; /* Добавляем padding для удобного нажатия */
 }
 
 header button:hover, header span:hover {
@@ -927,6 +931,7 @@ header button:hover, header span:hover {
     header {
         flex-direction: column; /* Изменение на колонку при малой ширине экрана */
         align-items: center;
+        padding: 15px; /* Увеличенный отступ для мобильных */
     }
 
     header #logo {
@@ -935,5 +940,9 @@ header button:hover, header span:hover {
 
     header button, header span {
         margin-left: 0; /* Убрать отступы для кнопок */
+        width: 100%; /* Растягиваем кнопки на всю ширину */
+        max-width: 200px; /* Ограничиваем ширину кнопок */
+        text-align: center; /* Центрируем текст внутри кнопок */
+        margin-bottom: 10px; /* Отступы между кнопками */
     }
 }
