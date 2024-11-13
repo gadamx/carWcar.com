@@ -655,13 +655,13 @@ li {
 }
 
 .search-wrapper {
-    width: 70%;
+    width: 90%;
     display:inline-flex;
     background-color: #007BFF;
     height: 45px;
     border-radius: 20px;
     
-    margin-left: 13%;
+    margin-left: 7%;
 
 }
 
@@ -681,7 +681,7 @@ li {
     
     height: 45px;
     margin-right: 20px;
-    padding: 8px 20px 3px 20px;
+    padding: 7px 7px;
 }
 
 
