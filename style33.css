@@ -9,7 +9,7 @@ body {
 
 header button, header span {
     cursor: pointer;
-    margin-left: 20px;
+    margin-left: 1px;
     border: none;
     background: none;
     color: #f1ecec;
