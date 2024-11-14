@@ -478,7 +478,7 @@ function filterByCategory(category) {
 
 // Переход на главную страницу
 function goHome() {
-    window.location.href = 'index.html';
+    window.location.href = 'https://gadamx.github.io/carWcar.com/';
 }
 
 // Переход на страницу профиля
